@@ -1,12 +1,12 @@
 <!-- HERO BANNER -->
 <div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:1a3a4a,60:2d6a7a,100:0d1117&height=250&section=header&text=Manishankar%20Kumar&fontSize=60&fontColor=67e8f9&fontAlignY=38&desc=Staff%20Backend%20Engineer%20%E2%80%A2%20Distributed%20Systems%20%E2%80%A2%20GenAI%20Platforms&descAlignY=58&descAlign=50&descSize=20&descColor=a0c4d0&animation=fadeIn&stroke=22d3ee&strokeWidth=1" width="100%"/>
-
+ 
+<img src="https://capsule-render.vercel.app/api?type=transparent&height=150&section=header&text=Manishankar%20Kumar&fontSize=70&fontColor=gradient&fontAlignY=50&desc=Staff%20Backend%20Engineer%20%E2%80%A2%20Distributed%20Systems%20%E2%80%A2%20GenAI&descAlignY=75&descSize=18" width="100%"/>
+ 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&height=50&lines=Staff+Backend+Engineer+%40+BFSI+%26+SaaS;Distributed+Systems+%7C+Event-Driven+Architecture;GenAI+%7C+RAG+Pipelines+%7C+LLM+Orchestration;12%2B+Years+Building+Scalable+Backend+Systems" alt="Typing SVG" />
-
+ 
 <br/>
-
+ 
 <a href="https://linkedin.com/in/mrmanishankar">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn"/>
 </a>
@@ -16,16 +16,16 @@
 <a href="mailto:manishankarkumar131@gmail.com">
   <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email"/>
 </a>
-
+ 
 <br/><br/>
-
+ 
 <img src="https://img.shields.io/badge/Experience-12%2B%20Years-238636?style=flat-square&labelColor=0d1117&color=238636"/>
 <img src="https://img.shields.io/badge/Domain-BFSI%20%26%20SaaS-1f6feb?style=flat-square&labelColor=0d1117&color=1f6feb"/>
 <img src="https://img.shields.io/badge/Location-Gurgaon%2C%20India-f0883e?style=flat-square&labelColor=0d1117&color=f0883e"/>
 <img src="https://img.shields.io/badge/Status-Open%20to%20Work-238636?style=flat-square&labelColor=0d1117&color=238636"/>
-
+ 
 </div>
-
+ 
 ---
 
 ## 🧑‍💻 About Me
