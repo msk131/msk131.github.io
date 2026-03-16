@@ -1,33 +1,28 @@
-<!-- HERO BANNER — dark bg, white text, always renders as image -->
+<!-- HERO BANNER -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,40:0d1117,60:161b22,100:0d1117&height=220&section=header&text=Manishankar%20Kumar&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Staff%20Backend%20Engineer%20%E2%80%A2%20Distributed%20Systems%20%E2%80%A2%20GenAI%20Platforms&descAlignY=60&descColor=58a6ff&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,4,6&height=250&section=header&text=Manishankar%20Kumar&fontSize=60&fontColor=gradient&fontAlignY=38&desc=Staff%20Backend%20Engineer%20%E2%80%A2%20Distributed%20Systems%20%E2%80%A2%20GenAI%20Platforms&descAlignY=58&descAlign=50&descSize=20&descColor=8b949e&animation=fadeIn&stroke=58a6ff&strokeWidth=2" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&width=620&height=45&lines=Staff+Backend+Engineer+%40+BFSI+%26+SaaS;Distributed+Systems+Architect;Event-Driven+Platform+Builder;GenAI+%7C+RAG+%7C+LLM+Orchestration+Expert;12%2B+Years+of+Scalable+Backend+Systems" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&height=50&lines=Staff+Backend+Engineer+%40+BFSI+%26+SaaS;Distributed+Systems+%7C+Event-Driven+Architecture;GenAI+%7C+RAG+Pipelines+%7C+LLM+Orchestration;12%2B+Years+Building+Scalable+Backend+Systems" alt="Typing SVG" />
 
-<br/><br/>
+<br/>
 
 <a href="https://linkedin.com/in/mrmanishankar">
-  <img src="https://img.shields.io/badge/LinkedIn-mrmanishankar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn"/>
 </a>
-&nbsp;
 <a href="https://github.com/msk131">
-  <img src="https://img.shields.io/badge/GitHub-msk131-24292e?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="GitHub"/>
 </a>
-&nbsp;
 <a href="mailto:manishankarkumar131@gmail.com">
-  <img src="https://img.shields.io/badge/Email-manishankarkumar131-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" alt="Email"/>
 </a>
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/Experience-12%2B%20Years-3fb950?style=flat-square"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Domain-BFSI%20%26%20SaaS-58a6ff?style=flat-square"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Location-Gurgaon%2C%20India-e3b341?style=flat-square"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Status-Open%20to%20Work-3fb950?style=flat-square"/>
+<img src="https://img.shields.io/badge/Experience-12%2B%20Years-238636?style=flat-square&labelColor=0d1117&color=238636"/>
+<img src="https://img.shields.io/badge/Domain-BFSI%20%26%20SaaS-1f6feb?style=flat-square&labelColor=0d1117&color=1f6feb"/>
+<img src="https://img.shields.io/badge/Location-Gurgaon%2C%20India-f0883e?style=flat-square&labelColor=0d1117&color=f0883e"/>
+<img src="https://img.shields.io/badge/Status-Open%20to%20Work-238636?style=flat-square&labelColor=0d1117&color=238636"/>
 
 </div>
 
@@ -78,23 +73,17 @@
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/RAG-Architecture-238636?style=for-the-badge&labelColor=161b22"/>
-&nbsp;
-<img src="https://img.shields.io/badge/LangChain-Framework-1f6feb?style=for-the-badge&labelColor=161b22"/>
-&nbsp;
-<img src="https://img.shields.io/badge/LangGraph-Agentic_AI-6e40c9?style=for-the-badge&labelColor=161b22"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Vector_Search-Embeddings-da3633?style=for-the-badge&labelColor=161b22"/>
+<img src="https://img.shields.io/badge/RAG-Architecture-238636?style=for-the-badge&labelColor=0d1117&logo=openai&logoColor=white"/>
+<img src="https://img.shields.io/badge/LangChain-Framework-1f6feb?style=for-the-badge&labelColor=0d1117&logo=chainlink&logoColor=white"/>
+<img src="https://img.shields.io/badge/LangGraph-Agentic_AI-6e40c9?style=for-the-badge&labelColor=0d1117&logo=graphql&logoColor=white"/>
+<img src="https://img.shields.io/badge/Vector_Search-Embeddings-f85149?style=for-the-badge&labelColor=0d1117&logo=elasticsearch&logoColor=white"/>
 
-<br/><br/>
+<br/>
 
-<img src="https://img.shields.io/badge/LLM-Orchestration-3fb950?style=for-the-badge&labelColor=161b22"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Prompt-Engineering-58a6ff?style=for-the-badge&labelColor=161b22"/>
-&nbsp;
-<img src="https://img.shields.io/badge/AWS_Bedrock-GenAI-e3b341?style=for-the-badge&labelColor=161b22"/>
-&nbsp;
-<img src="https://img.shields.io/badge/Embedding-Pipelines-f78166?style=for-the-badge&labelColor=161b22"/>
+<img src="https://img.shields.io/badge/LLM-Orchestration-238636?style=for-the-badge&labelColor=0d1117&logo=openai&logoColor=white"/>
+<img src="https://img.shields.io/badge/Prompt-Engineering-58a6ff?style=for-the-badge&labelColor=0d1117&logo=probot&logoColor=white"/>
+<img src="https://img.shields.io/badge/AWS_Bedrock-GenAI-f0883e?style=for-the-badge&labelColor=0d1117&logo=amazonaws&logoColor=white"/>
+<img src="https://img.shields.io/badge/Embedding-Pipelines-da3633?style=for-the-badge&labelColor=0d1117&logo=apache&logoColor=white"/>
 
 </div>
 
@@ -104,13 +93,12 @@
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=msk131&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true"/>
-&nbsp;
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=msk131&layout=compact&theme=tokyonight&hide_border=true"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=msk131&show_icons=true&theme=github_dark&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=msk131&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9"/>
 
-<br/>
+<br/><br/>
 
-<img src="https://streak-stats.demolab.com?user=msk131&theme=tokyonight&hide_border=true" width="55%"/>
+<img src="https://streak-stats.demolab.com?user=msk131&theme=github-dark-blue&hide_border=true&background=0d1117&ring=58a6ff&fire=f85149&currStreakLabel=c9d1d9" width="55%"/>
 
 </div>
 
@@ -120,7 +108,7 @@
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=msk131&theme=tokyo-night&hide_border=true&area=true" width="100%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=msk131&theme=github-compact&hide_border=true&bg_color=0d1117&color=58a6ff&line=58a6ff&point=c9d1d9&area=true&area_color=58a6ff" width="100%"/>
 
 </div>
 
@@ -131,7 +119,7 @@
 ### 🧩 Microservices Architecture
 
 | Repository | Description | Tech |
-|---|---|---|
+|------------|-------------|------|
 | [EurekaServer](https://github.com/msk131/EurekaServer) | Service discovery server | Spring Cloud Netflix |
 | [zuul-server](https://github.com/msk131/zuul-server) | API Gateway | Netflix Zuul |
 | [config-server](https://github.com/msk131/config-server) | Centralized config management | Spring Cloud Config |
@@ -141,14 +129,14 @@
 ### ⚡ Event-Driven Systems
 
 | Repository | Description | Tech |
-|---|---|---|
+|------------|-------------|------|
 | [spring-boot-apache-kafka](https://github.com/msk131/spring-boot-apache-kafka) | Kafka producer/consumer | Spring Boot + Kafka |
 | [Spring-Boot-RabbitMQ-Producer](https://github.com/msk131/Spring-Boot-RabbitMQ-Producer-master) | RabbitMQ messaging | Spring AMQP |
 
 ### 🌐 Full Stack Applications
 
 | Repository | Description | Tech |
-|---|---|---|
+|------------|-------------|------|
 | [react-crud-spring-boot](https://github.com/msk131/react-crud-spring-boot) | Full-stack CRUD app | React + Spring Boot |
 | [angular-frontend](https://github.com/msk131/angular-frontend) | SPA frontend | Angular |
 | [RecruitmentApplication](https://github.com/msk131/RecruitmentApplication) | Recruitment management system | Spring Boot |
@@ -157,7 +145,7 @@
 ### ☁️ DevOps & Infrastructure
 
 | Repository | Description | Tech |
-|---|---|---|
+|------------|-------------|------|
 | [nginx-consul-template](https://github.com/msk131/nginx-consul-template) | Dynamic reverse proxy config | Nginx + Consul |
 | [angular-7-npm-docker](https://github.com/msk131/angular-7-npm-docker) | Containerised Angular app | Docker |
 | [arithmetic-operations-maven-docker](https://github.com/msk131/arithmetic-operations-maven-docker) | Maven + Docker pipeline | Docker + Maven |
@@ -187,14 +175,14 @@
 <div align="center">
 
 | Platform | Link |
-|---|---|
+|----------|------|
 | 📧 Email | [manishankarkumar131@gmail.com](mailto:manishankarkumar131@gmail.com) |
 | 💼 LinkedIn | [linkedin.com/in/mrmanishankar](https://linkedin.com/in/mrmanishankar) |
 | 💻 GitHub | [github.com/msk131](https://github.com/msk131) |
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=msk131&label=Profile+Views&color=58a6ff&style=flat-square"/>
+<img src="https://komarev.com/ghpvc/?username=msk131&label=Profile+Views&color=58a6ff&style=flat-square&labelColor=0d1117"/>
 
 </div>
 
@@ -202,6 +190,6 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:0d1117&height=120&section=footer&text=Open%20to%20Opportunities&fontSize=18&fontColor=58a6ff&fontAlignY=65&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:161b22&height=120&section=footer&text=Open%20to%20Opportunities&fontSize=20&fontColor=8b949e&fontAlignY=70&animation=twinkling" width="100%"/>
 
 </div>
