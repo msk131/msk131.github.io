@@ -1,7 +1,7 @@
 <!-- HERO BANNER -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,4,6&height=250&section=header&text=Manishankar%20Kumar&fontSize=60&fontColor=gradient&fontAlignY=38&desc=Staff%20Backend%20Engineer%20%E2%80%A2%20Distributed%20Systems%20%E2%80%A2%20GenAI%20Platforms&descAlignY=58&descAlign=50&descSize=20&descColor=8b949e&animation=fadeIn&stroke=58a6ff&strokeWidth=2" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:1a3a4a,60:2d6a7a,100:0d1117&height=250&section=header&text=Manishankar%20Kumar&fontSize=60&fontColor=67e8f9&fontAlignY=38&desc=Staff%20Backend%20Engineer%20%E2%80%A2%20Distributed%20Systems%20%E2%80%A2%20GenAI%20Platforms&descAlignY=58&descAlign=50&descSize=20&descColor=a0c4d0&animation=fadeIn&stroke=22d3ee&strokeWidth=1" width="100%"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&height=50&lines=Staff+Backend+Engineer+%40+BFSI+%26+SaaS;Distributed+Systems+%7C+Event-Driven+Architecture;GenAI+%7C+RAG+Pipelines+%7C+LLM+Orchestration;12%2B+Years+Building+Scalable+Backend+Systems" alt="Typing SVG" />
 
