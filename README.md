@@ -1,27 +1,18 @@
+<!-- HERO BANNER — dark bg, white text, always renders as image -->
 <div align="center">
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                        HEADER                              -->
-<!-- ═══════════════════════════════════════════════════════════ -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,40:0d1117,60:161b22,100:0d1117&height=220&section=header&text=Manishankar%20Kumar&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Staff%20Backend%20Engineer%20%E2%80%A2%20Distributed%20Systems%20%E2%80%A2%20GenAI%20Platforms&descAlignY=60&descColor=58a6ff&animation=fadeIn" width="100%"/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Manishankar%20Kumar&fontSize=48&fontColor=00f5c4&fontAlignY=38&desc=Staff%20Backend%20Engineer%20%E2%80%A2%20Distributed%20Systems%20%E2%80%A2%20GenAI%20Platforms&descAlignY=58&descColor=a0aec0&animation=fadeIn" width="100%"/>
-
-<br/>
-
-<!-- Typing animation -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=800&color=00F5C4&center=true&vCenter=true&multiline=false&width=600&height=50&lines=Staff+Backend+Engineer+%40+BFSI+%26+SaaS;Distributed+Systems+Architect;Event-Driven+Platform+Builder;GenAI+%7C+RAG+%7C+LLM+Orchestration;12%2B+Years+of+Scalable+Systems" alt="Typing SVG" />
-</a>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&width=620&height=45&lines=Staff+Backend+Engineer+%40+BFSI+%26+SaaS;Distributed+Systems+Architect;Event-Driven+Platform+Builder;GenAI+%7C+RAG+%7C+LLM+Orchestration+Expert;12%2B+Years+of+Scalable+Backend+Systems" alt="Typing SVG" />
 
 <br/><br/>
 
-<!-- Profile badges -->
 <a href="https://linkedin.com/in/mrmanishankar">
   <img src="https://img.shields.io/badge/LinkedIn-mrmanishankar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 &nbsp;
 <a href="https://github.com/msk131">
-  <img src="https://img.shields.io/badge/GitHub-msk131-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-msk131-24292e?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 &nbsp;
 <a href="mailto:manishankarkumar131@gmail.com">
@@ -30,41 +21,30 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/Experience-12%2B%20Years-00f5c4?style=flat-square&labelColor=0f0c29"/>
+<img src="https://img.shields.io/badge/Experience-12%2B%20Years-3fb950?style=flat-square"/>
 &nbsp;
-<img src="https://img.shields.io/badge/Domain-BFSI%20%26%20SaaS-4f8ef7?style=flat-square&labelColor=0f0c29"/>
+<img src="https://img.shields.io/badge/Domain-BFSI%20%26%20SaaS-58a6ff?style=flat-square"/>
 &nbsp;
-<img src="https://img.shields.io/badge/Focus-Distributed%20Systems-f75f8e?style=flat-square&labelColor=0f0c29"/>
+<img src="https://img.shields.io/badge/Location-Gurgaon%2C%20India-e3b341?style=flat-square"/>
 &nbsp;
-<img src="https://img.shields.io/badge/Specialty-GenAI%20Platforms-a78bfa?style=flat-square&labelColor=0f0c29"/>
+<img src="https://img.shields.io/badge/Status-Open%20to%20Work-3fb950?style=flat-square"/>
 
 </div>
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                      ABOUT ME                              -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-
 ## 🧑‍💻 About Me
 
-```text
-Staff Backend Engineer with 12+ years building high-throughput distributed systems
-across BFSI and SaaS platforms — from event-driven microservices to GenAI pipelines.
-```
+> **Backend engineer with 12+ years of experience building scalable distributed systems across BFSI and SaaS platforms.**
 
 - 🏗️ &nbsp;Architect of **microservices** and **event-driven platforms** at scale
-- ⚡ &nbsp;Deep expertise in **high-concurrency backend systems** (millions of TPS)
-- 🤖 &nbsp;Building **GenAI platforms** — RAG, LLM orchestration, vector search
+- ⚡ &nbsp;Expert in **high-concurrency backend systems** handling millions of TPS
+- 🤖 &nbsp;Building **GenAI platforms** — RAG pipelines, LLM orchestration, vector search
 - ☁️ &nbsp;Cloud-native on **AWS** and **Azure** with Kubernetes-first deployments
 - 🔭 &nbsp;Currently exploring **LangGraph**, **agentic AI**, and **real-time ML inference**
-- 💡 &nbsp;Believer in: _Observable · Resilient · Evolvable_ systems
+- 💡 &nbsp;Core belief: _Systems must be **Observable**, **Resilient**, and **Evolvable**_
 
 ---
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                     TECH STACK                             -->
-<!-- ═══════════════════════════════════════════════════════════ -->
 
 ## 🛠️ Tech Stack
 
@@ -74,7 +54,7 @@ across BFSI and SaaS platforms — from event-driven microservices to GenAI pipe
 
 <img src="https://skillicons.dev/icons?i=java,python,kotlin,ts&theme=dark"/>
 
-**Backend Frameworks**
+**Backend**
 
 <img src="https://skillicons.dev/icons?i=spring,nodejs&theme=dark"/>
 
@@ -94,175 +74,134 @@ across BFSI and SaaS platforms — from event-driven microservices to GenAI pipe
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                     GENAI STACK                            -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-
 ## 🤖 GenAI Platform Stack
 
 <div align="center">
 
-![RAG](https://img.shields.io/badge/RAG-Architecture-00f5c4?style=for-the-badge&labelColor=0f0c29)
-![LangChain](https://img.shields.io/badge/LangChain-Orchestration-4f8ef7?style=for-the-badge&labelColor=0f0c29)
-![LangGraph](https://img.shields.io/badge/LangGraph-Agentic%20AI-a78bfa?style=for-the-badge&labelColor=0f0c29)
-![Vector Search](https://img.shields.io/badge/Vector%20Search-Embeddings-f75f8e?style=for-the-badge&labelColor=0f0c29)
-![LLM Systems](https://img.shields.io/badge/LLM-Orchestration-fbbf24?style=for-the-badge&labelColor=0f0c29)
-![Prompt Eng](https://img.shields.io/badge/Prompt-Engineering-34d399?style=for-the-badge&labelColor=0f0c29)
+<img src="https://img.shields.io/badge/RAG-Architecture-238636?style=for-the-badge&labelColor=161b22"/>
+&nbsp;
+<img src="https://img.shields.io/badge/LangChain-Framework-1f6feb?style=for-the-badge&labelColor=161b22"/>
+&nbsp;
+<img src="https://img.shields.io/badge/LangGraph-Agentic_AI-6e40c9?style=for-the-badge&labelColor=161b22"/>
+&nbsp;
+<img src="https://img.shields.io/badge/Vector_Search-Embeddings-da3633?style=for-the-badge&labelColor=161b22"/>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/LLM-Orchestration-3fb950?style=for-the-badge&labelColor=161b22"/>
+&nbsp;
+<img src="https://img.shields.io/badge/Prompt-Engineering-58a6ff?style=for-the-badge&labelColor=161b22"/>
+&nbsp;
+<img src="https://img.shields.io/badge/AWS_Bedrock-GenAI-e3b341?style=for-the-badge&labelColor=161b22"/>
+&nbsp;
+<img src="https://img.shields.io/badge/Embedding-Pipelines-f78166?style=for-the-badge&labelColor=161b22"/>
 
 </div>
 
 ---
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                     GITHUB STATS                           -->
-<!-- ═══════════════════════════════════════════════════════════ -->
 
 ## 📊 GitHub Stats
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=msk131&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=00f5c4&icon_color=4f8ef7&text_color=a0aec0"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=msk131&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true"/>
 &nbsp;
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=msk131&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00f5c4&text_color=a0aec0"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=msk131&layout=compact&theme=tokyonight&hide_border=true"/>
 
 <br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com?user=msk131&theme=tokyonight&hide_border=true&background=0d1117&stroke=00f5c4&ring=4f8ef7&fire=f75f8e&currStreakLabel=00f5c4&sideLabels=a0aec0&dates=a0aec0" width="60%"/>
+<img src="https://streak-stats.demolab.com?user=msk131&theme=tokyonight&hide_border=true" width="55%"/>
 
 </div>
 
 ---
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                  CONTRIBUTION GRAPH                        -->
-<!-- ═══════════════════════════════════════════════════════════ -->
 
 ## 🔥 Contribution Activity
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=msk131&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=00f5c4&line=4f8ef7&point=f75f8e&area=true&area_color=00f5c4" width="100%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=msk131&theme=tokyo-night&hide_border=true&area=true" width="100%"/>
 
 </div>
 
 ---
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                      PROJECTS                              -->
-<!-- ═══════════════════════════════════════════════════════════ -->
 
 ## ⭐ Featured Projects
 
-<div align="center">
-
 ### 🧩 Microservices Architecture
-> Spring Cloud ecosystem — service discovery, config management, circuit breakers, and admin
 
-| Repo | Description |
-|------|-------------|
-| [EurekaServer](https://github.com/msk131/EurekaServer) | Service discovery with Netflix Eureka |
-| [zuul-server](https://github.com/msk131/zuul-server) | API Gateway using Netflix Zuul |
-| [config-server](https://github.com/msk131/config-server) | Centralized configuration server |
-| [config-client](https://github.com/msk131/config-client) | Config client integration |
-| [hystrix-spring-boot](https://github.com/msk131/hystrix-spring-boot) | Circuit breaker with Hystrix |
-| [admin-server](https://github.com/msk131/admin-server) | Spring Boot Admin server |
-| [admin-client](https://github.com/msk131/admin-client) | Spring Boot Admin client |
+| Repository | Description | Tech |
+|---|---|---|
+| [EurekaServer](https://github.com/msk131/EurekaServer) | Service discovery server | Spring Cloud Netflix |
+| [zuul-server](https://github.com/msk131/zuul-server) | API Gateway | Netflix Zuul |
+| [config-server](https://github.com/msk131/config-server) | Centralized config management | Spring Cloud Config |
+| [hystrix-spring-boot](https://github.com/msk131/hystrix-spring-boot) | Circuit breaker pattern | Hystrix |
+| [admin-server](https://github.com/msk131/admin-server) | Service monitoring dashboard | Spring Boot Admin |
 
 ### ⚡ Event-Driven Systems
-> Kafka and RabbitMQ messaging implementations
 
-| Repo | Description |
-|------|-------------|
-| [spring-boot-apache-kafka](https://github.com/msk131/spring-boot-apache-kafka) | Kafka producer/consumer with Spring Boot |
-| [Spring-Boot-RabbitMQ-Producer](https://github.com/msk131/Spring-Boot-RabbitMQ-Producer-master) | RabbitMQ messaging with Spring Boot |
+| Repository | Description | Tech |
+|---|---|---|
+| [spring-boot-apache-kafka](https://github.com/msk131/spring-boot-apache-kafka) | Kafka producer/consumer | Spring Boot + Kafka |
+| [Spring-Boot-RabbitMQ-Producer](https://github.com/msk131/Spring-Boot-RabbitMQ-Producer-master) | RabbitMQ messaging | Spring AMQP |
 
 ### 🌐 Full Stack Applications
-> Spring Boot + React / Angular frontends
 
-| Repo | Description |
-|------|-------------|
-| [react-crud-spring-boot](https://github.com/msk131/react-crud-spring-boot) | Full-stack CRUD app with React + Spring Boot |
-| [angular-frontend](https://github.com/msk131/angular-frontend) | Angular frontend application |
-| [quizz-backend](https://github.com/msk131/quizz-backend) | Quiz application backend |
-| [quizz-frontend](https://github.com/msk131/quizz-frontend) | Quiz application frontend |
-| [RecruitmentApplication](https://github.com/msk131/RecruitmentApplication) | Recruitment management system |
+| Repository | Description | Tech |
+|---|---|---|
+| [react-crud-spring-boot](https://github.com/msk131/react-crud-spring-boot) | Full-stack CRUD app | React + Spring Boot |
+| [angular-frontend](https://github.com/msk131/angular-frontend) | SPA frontend | Angular |
+| [RecruitmentApplication](https://github.com/msk131/RecruitmentApplication) | Recruitment management system | Spring Boot |
+| [quizz-backend](https://github.com/msk131/quizz-backend) + [frontend](https://github.com/msk131/quizz-frontend) | Quiz platform | Spring Boot + Angular |
 
 ### ☁️ DevOps & Infrastructure
-> Containerized apps, Nginx, Consul
 
-| Repo | Description |
-|------|-------------|
-| [angular-7-npm-docker](https://github.com/msk131/angular-7-npm-docker) | Angular app containerized with Docker |
-| [arithmetic-operations-maven-docker](https://github.com/msk131/arithmetic-operations-maven-docker) | Maven + Docker pipeline |
-| [nginx-consul-template](https://github.com/msk131/nginx-consul-template) | Dynamic Nginx config with Consul |
-
-### 🧪 Backend Experiments
-> JPA, REST APIs, Spring 5
-
-| Repo | Description |
-|------|-------------|
-| [spring-hibernate-jpa](https://github.com/msk131/spring-hibernate-jpa) | Hibernate + JPA integration |
-| [sf-movies-service](https://github.com/msk131/sf-movies-service) | REST service for SF movie locations |
-| [Spring-5.0-By-Example](https://github.com/msk131/Spring-5.0-By-Example) | Spring 5 patterns and examples |
-
-</div>
+| Repository | Description | Tech |
+|---|---|---|
+| [nginx-consul-template](https://github.com/msk131/nginx-consul-template) | Dynamic reverse proxy config | Nginx + Consul |
+| [angular-7-npm-docker](https://github.com/msk131/angular-7-npm-docker) | Containerised Angular app | Docker |
+| [arithmetic-operations-maven-docker](https://github.com/msk131/arithmetic-operations-maven-docker) | Maven + Docker pipeline | Docker + Maven |
 
 ---
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                  ENGINEERING PHILOSOPHY                    -->
-<!-- ═══════════════════════════════════════════════════════════ -->
 
 ## ⚡ Engineering Philosophy
 
 ```
-╔══════════════════════════════════════════════════════════════╗
-║  Good backend systems are not just scalable.                 ║
-║                                                              ║
-║  ◈  Observable   — you can't fix what you can't see          ║
-║  ◈  Resilient    — graceful under pressure                   ║
-║  ◈  Evolvable    — outlasts the team that built it           ║
-║                                                              ║
-║  // ship less. think more. automate everything.              ║
-╚══════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   Good backend systems are not just scalable.                    ║
+║                                                                  ║
+║   ◈  Observable   —  you can't fix what you can't see            ║
+║   ◈  Resilient    —  graceful under pressure, not brittle        ║
+║   ◈  Evolvable    —  built to outlast the team that built it     ║
+║                                                                  ║
+║   // ship less · think more · automate everything                ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
 ```
 
 ---
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                       CONTACT                              -->
-<!-- ═══════════════════════════════════════════════════════════ -->
 
 ## 📬 Let's Connect
 
 <div align="center">
 
-<a href="mailto:manishankarkumar131@gmail.com">
-  <img src="https://img.shields.io/badge/✉%20Email-manishankarkumar131%40gmail.com-EA4335?style=for-the-badge&labelColor=0f0c29"/>
-</a>
+| Platform | Link |
+|---|---|
+| 📧 Email | [manishankarkumar131@gmail.com](mailto:manishankarkumar131@gmail.com) |
+| 💼 LinkedIn | [linkedin.com/in/mrmanishankar](https://linkedin.com/in/mrmanishankar) |
+| 💻 GitHub | [github.com/msk131](https://github.com/msk131) |
 
-<br/><br/>
+<br/>
 
-<a href="https://linkedin.com/in/mrmanishankar">
-  <img src="https://img.shields.io/badge/💼%20LinkedIn-linkedin.com%2Fin%2Fmrmanishankar-0A66C2?style=for-the-badge&labelColor=0f0c29"/>
-</a>
-
-<br/><br/>
-
-<a href="https://github.com/msk131">
-  <img src="https://img.shields.io/badge/💻%20GitHub-github.com%2Fmsk131-181717?style=for-the-badge&labelColor=0f0c29"/>
-</a>
+<img src="https://komarev.com/ghpvc/?username=msk131&label=Profile+Views&color=58a6ff&style=flat-square"/>
 
 </div>
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!--                       FOOTER                               -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer&text=Open%20to%20Opportunities&fontSize=18&fontColor=00f5c4&fontAlignY=65&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:0d1117&height=120&section=footer&text=Open%20to%20Opportunities&fontSize=18&fontColor=58a6ff&fontAlignY=65&animation=fadeIn" width="100%"/>
 
 </div>
