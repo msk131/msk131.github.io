@@ -1,7 +1,7 @@
 <!-- HERO BANNER -->
 <div align="center">
  
-<img src="https://capsule-render.vercel.app/api?type=transparent&height=150&section=header&text=Mani Shankar%20Kumar&fontSize=70&fontColor=gradient&fontAlignY=50&desc=Staff%20Backend%20Engineer%20%E2%80%A2%20Distributed%20Systems%20%E2%80%A2%20GenAI&descAlignY=75&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=transparent&height=150&section=header&text=Manishankar%20Kumar&fontSize=70&fontColor=gradient&fontAlignY=50&desc=Staff%20Backend%20Engineer%20%E2%80%A2%20Distributed%20Systems%20%E2%80%A2%20GenAI&descAlignY=75&descSize=18" width="100%"/>
  
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&height=50&lines=Staff+Backend+Engineer+%40+BFSI+%26+SaaS;Distributed+Systems+%7C+Event-Driven+Architecture;GenAI+%7C+RAG+Pipelines+%7C+LLM+Orchestration;12%2B+Years+Building+Scalable+Backend+Systems" alt="Typing SVG" />
  
