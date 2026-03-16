@@ -72,3 +72,109 @@ Features:
 - User interaction workflows
 
 Tech Stack
+
+
+---
+
+## 📦 Microservices Infrastructure Stack
+
+A collection of Spring Cloud microservices demonstrating enterprise architecture patterns.
+
+### Service Discovery
+https://github.com/msk131/EurekaServer
+
+### API Gateway
+https://github.com/msk131/zuul-server
+
+### Config Server
+https://github.com/msk131/config-server
+
+### Config Client
+https://github.com/msk131/config-client
+
+Patterns implemented:
+
+- Service discovery
+- Centralized configuration
+- API gateway routing
+- Distributed system communication
+
+
+---
+
+## 📡 Event Driven Systems
+
+### Kafka Microservices
+https://github.com/msk131/spring-boot-apache-kafka
+
+Implements event streaming architecture using Kafka.
+
+### RabbitMQ Producer
+https://github.com/msk131/Spring-Boot-RabbitMQ-Producer-master
+
+Demonstrates async messaging patterns.
+
+---
+
+## ⚡ Resilient Microservices
+
+### Circuit Breaker
+https://github.com/msk131/hystrix-spring-boot
+
+Implements resilience patterns for microservices communication.
+
+---
+
+## 🌐 Full Stack Application
+
+### React + Spring Boot CRUD
+https://github.com/msk131/react-crud-spring-boot
+
+Stack
+
+
+---
+
+## 🎯 Recruitment Platform
+
+https://github.com/msk131/RecruitmentApplication
+
+A recruitment workflow system demonstrating full-stack application architecture.
+
+---
+
+# 📊 GitHub Stats
+
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=msk131&show_icons=true&theme=tokyonight)
+
+---
+
+# 📈 Top Languages
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=msk131&layout=compact)
+
+---
+
+# 🧠 Engineering Interests
+
+I enjoy working on:
+
+• Distributed systems  
+• AI platform engineering  
+• high-scale backend systems  
+• microservice reliability patterns  
+• event-driven architectures  
+
+---
+
+# 📫 Let's Connect
+
+LinkedIn  
+https://linkedin.com/in/mrmanishankar  
+
+GitHub  
+https://github.com/msk131
+
+---
+
+⭐ If you like my work, feel free to follow or star repositories!
