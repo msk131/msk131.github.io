@@ -224,12 +224,12 @@
         <div>
           <div class="exp-role">Lead Software Engineer &ndash; GenAI &amp; Fullstack</div>
           <div class="exp-highlight">
-            <div class="exp-hl-label">GenAI Impact</div>
-            <div class="exp-hl-text">Delivered two production GenAI systems: cash reconciliation engine (AWS Lambda + multithreading) and external transaction prediction using ML-based matching &mdash; reducing manual intervention by ~40%.</div>
+            <div class="exp-hl-label">Key Impact</div>
+            <div class="exp-hl-text">Delivered Cash Break (AWS Lambda + Java multithreading) and an ML-based transaction prediction engine &mdash; reducing manual reconciliation intervention by ~40%. Sub-architected U2S pipeline and Onboarding Agent; recognized as a key technical contributor for GenAI platform initiatives.</div>
           </div>
-          <div class="exp-desc">Sub-architected U2S data pipeline from scratch, establishing foundational patterns adopted platform-wide. Integrated LLM-based extraction via LangChain and Azure AI Search with hallucination mitigation. Optimized embedding pipelines and chunking for retrieval latency and token cost. Enhanced observability with CloudWatch, OpenSearch, and Dynatrace.</div>
+          <div class="exp-desc">Built a Cash Break system using AWS Lambda and Java multithreading, enabling high-throughput parallel processing of financial transactions with sub-second latency at scale. Designed and delivered an external transaction prediction engine leveraging ML-based matching algorithms to automate reconciliation of unmatched entries, reducing manual intervention by ~40%. Sub-architected the U2S data pipeline &amp; Onboarding Agent from the ground up, establishing foundational infrastructure patterns adopted across the platform. Integrated LLM-based extraction into document processing workflows using LangChain and Azure AI Search; implemented structured output validation and hallucination mitigation strategies. Optimized retrieval latency and LLM token costs through tuning of embedding pipelines and chunking strategies. Strengthened observability using CloudWatch, OpenSearch, and Dynatrace.</div>
           <div class="exp-tags">
-            <span class="exp-tag">LangChain</span><span class="exp-tag">Azure OpenAI</span><span class="exp-tag">Azure AI Search</span><span class="exp-tag">AWS Lambda</span><span class="exp-tag">RAG</span><span class="exp-tag">Java</span><span class="exp-tag">Python</span><span class="exp-tag">Kafka</span>
+            <span class="exp-tag">LangChain</span><span class="exp-tag">LangGraph</span><span class="exp-tag">Azure OpenAI</span><span class="exp-tag">Azure AI Search</span><span class="exp-tag">AWS Lambda</span><span class="exp-tag">RAG</span><span class="exp-tag">Java</span><span class="exp-tag">Python</span><span class="exp-tag">Kafka</span>
           </div>
         </div>
       </div>
@@ -343,30 +343,49 @@
   <section id="projects">
     <div class="section-label">Projects</div>
     <div class="projects-grid">
+
       <div class="project-card featured">
-        <div class="proj-badge">production &middot; genai</div>
-        <div class="proj-title">Cash Reconciliation Engine</div>
-        <div class="proj-desc">ML-based matching algorithms for automated reconciliation of unmatched financial entries. AWS Lambda + Java multithreading for sub-second latency. Reduced manual intervention by ~40% in a compliance-sensitive BFSI environment.</div>
+        <div class="proj-badge">production &middot; backend + ml</div>
+        <div class="proj-title">Cash Break System</div>
+        <div class="proj-desc">High-throughput parallel processing of financial transactions using AWS Lambda and Java multithreading. Designed for sub-second latency at scale in a compliance-sensitive BFSI environment.</div>
         <div class="proj-link">Clearwater Analytics (private)</div>
       </div>
+
       <div class="project-card featured">
-        <div class="proj-badge">production &middot; genai</div>
-        <div class="proj-title">LLM Document Extraction</div>
-        <div class="proj-desc">LLM-based document processing via LangChain and Azure AI Search. Structured output validation with hallucination mitigation and optimized embedding chunking strategies for production latency targets.</div>
+        <div class="proj-badge">production &middot; ml</div>
+        <div class="proj-title">Transaction Prediction Engine</div>
+        <div class="proj-desc">ML-based matching algorithms to automate reconciliation of unmatched external transaction entries. Reduced manual intervention by ~40%, eliminating a major operational bottleneck in financial workflows.</div>
         <div class="proj-link">Clearwater Analytics (private)</div>
       </div>
+
+      <div class="project-card featured">
+        <div class="proj-badge">production &middot; genai</div>
+        <div class="proj-title">U2S Data Pipeline</div>
+        <div class="proj-desc">Sub-architected from scratch — foundational infrastructure patterns adopted platform-wide. LLM-based extraction via LangChain and Azure AI Search with structured output validation and hallucination mitigation. Optimized embedding pipelines and chunking for retrieval latency and token cost.</div>
+        <div class="proj-link">Clearwater Analytics (private)</div>
+      </div>
+
+      <div class="project-card featured">
+        <div class="proj-badge">production &middot; agentic ai</div>
+        <div class="proj-title">Onboarding Agent</div>
+        <div class="proj-desc">Agentic workflow automating end-to-end client onboarding using LangGraph and Azure OpenAI. Multi-step agents handle document intake, validation, and routing — cutting manual touchpoints significantly at scale.</div>
+        <div class="proj-link">Clearwater Analytics (private)</div>
+      </div>
+
       <div class="project-card">
         <div class="proj-badge">open source</div>
         <div class="proj-title">Distributed Service Mesh</div>
         <div class="proj-desc">Eureka, Zuul, and Hystrix-based service mesh for fault-tolerant microservices. Circuit breakers, service discovery, and dynamic routing at scale.</div>
         <a class="proj-link" href="https://github.com/msk131/EurekaServer" target="_blank">github.com/msk131/EurekaServer &rarr;</a>
       </div>
+
       <div class="project-card">
         <div class="proj-badge">open source</div>
         <div class="proj-title">Event Streaming Pipeline</div>
         <div class="proj-desc">Real-time data pipelines using Apache Kafka and Spring Boot. Millions of events with guaranteed delivery, back-pressure management, and consumer group coordination.</div>
         <a class="proj-link" href="https://github.com/msk131" target="_blank">github.com/msk131 &rarr;</a>
       </div>
+
     </div>
     <div class="award-bar">
       <div>
