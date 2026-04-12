@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mani Shankar Kumar – GenAI Platform Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d0d0d;
+    --bg2: #141414;
+    --bg3: #1a1a1a;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --text: #f0ede8;
+    --muted: #888;
+    --hint: #555;
+    --accent: #1D9E75;
+    --accent2: #5DCAA5;
+    --accent-bg: rgba(29,158,117,0.1);
+    --accent-border: rgba(29,158,117,0.3);
+    --purple: #AFA9EC;
+    --purple-bg: rgba(175,169,236,0.1);
+    --amber: #EF9F27;
+    --amber-bg: rgba(239,159,39,0.1);
+    --serif: 'DM Serif Display', serif;
+    --sans: 'DM Sans', sans-serif;
+    --mono: 'DM Mono', monospace;
+    --radius: 10px;
+    --radius-lg: 16px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  a { color: var(--accent2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,13,13,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+  .nav-logo { font-family: var(--mono); font-size: 13px; color: var(--accent2); letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+
+  section { padding: 5rem 0; border-bottom: 0.5px solid var(--border); }
+  section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+
+  h1 { font-family: var(--serif); font-size: clamp(42px, 7vw, 72px); font-weight: 400; line-height: 1.1; color: var(--text); }
+  h2 { font-family: var(--sans); font-size: 22px; font-weight: 500; color: var(--text); }
+  h3 { font-family: var(--sans); font-size: 16px; font-weight: 500; color: var(--text); }
+
+  .hero { padding: 7rem 0 5rem; border-bottom: 0.5px solid var(--border); }
+  .hero-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    background: var(--accent-bg);
+    border: 0.5px solid var(--accent-border);
+    border-radius: 999px;
+    padding: 4px 14px;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 { margin-bottom: 1.25rem; }
+  .hero-sub {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .hero-sub strong { color: var(--text); font-weight: 500; }
+  .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2.5rem; }
+  .badge {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 0.5px solid var(--border2);
+    color: var(--muted);
+  }
+  .badge.green { background: var(--accent-bg); border-color: var(--accent-border); color: var(--accent2); }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 20px;
+    border-radius: var(--radius);
+    border: 0.5px solid var(--border2);
+    background: transparent;
+    color: var(--text);
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+    cursor: pointer;
+  }
+  .btn:hover { background: var(--bg3); border-color: var(--border2); text-decoration: none; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #04342C; }
+  .btn.primary:hover { background: #1D9E75cc; }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 2rem; }
+  .about-cell { background: var(--bg2); padding: 1.25rem 1.5rem; }
+  .about-cell-label { font-size: 11px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--hint); margin-bottom: 6px; }
+  .about-cell-val { font-size: 14px; color: var(--text); line-height: 1.5; }
+
+  .exp-list { display: flex; flex-direction: column; gap: 0; }
+  .exp-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .exp-item:last-child { border-bottom: none; }
+  .exp-date { font-family: var(--mono); font-size: 12px; color: var(--hint); padding-top: 3px; line-height: 1.6; }
+  .exp-current { color: var(--accent); font-weight: 500; }
+  .exp-company { font-size: 11px; color: var(--muted); margin-top: 4px; }
+  .exp-role { font-size: 16px; font-weight: 500; color: var(--text); margin-bottom: 8px; }
+  .exp-desc { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .exp-tag {
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 4px;
+    border: 0.5px solid var(--border);
+    color: var(--hint);
+    font-family: var(--mono);
+  }
+  .exp-highlight {
+    background: var(--accent-bg);
+    border: 0.5px solid var(--accent-border);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    margin-bottom: 12px;
+  }
+  .exp-highlight-label { font-size: 10px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 4px; }
+  .exp-highlight-text { font-size: 13px; color: #9FE1CB; line-height: 1.6; }
+
+  .skills-section { display: flex; flex-direction: column; gap: 1.5rem; }
+  .skill-group { }
+  .skill-group-label { font-size: 12px; font-family: var(--mono); color: var(--hint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .skill-tag {
+    font-size: 13px;
+    padding: 5px 13px;
+    border-radius: var(--radius);
+    border: 0.5px solid var(--border);
+    color: var(--text);
+    background: var(--bg2);
+    transition: border-color 0.15s;
+  }
+  .skill-tag:hover { border-color: var(--border2); }
+  .skill-tag.accent { background: var(--accent-bg); border-color: var(--accent-border); color: var(--accent2); }
+  .skill-tag.purple { background: var(--purple-bg); border-color: rgba(175,169,236,0.3); color: var(--purple); }
+
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 2rem; }
+  .project-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.5rem;
+    transition: border-color 0.2s;
+  }
+  .project-card:hover { border-color: var(--border2); }
+  .project-icon { font-size: 20px; margin-bottom: 10px; }
+  .project-title { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+  .project-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+  .project-link { font-size: 12px; font-family: var(--mono); color: var(--accent2); text-decoration: none; }
+  .project-link:hover { text-decoration: underline; }
+
+  .phi-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 1.5rem 1.75rem;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 2;
+    color: var(--muted);
+    margin-top: 2rem;
+  }
+  .phi-card .phi-title { color: var(--text); margin-bottom: 8px; }
+  .phi-card .phi-item { color: var(--accent2); }
+  .phi-card .phi-comment { color: var(--hint); font-size: 12px; margin-top: 10px; }
+
+  .connect-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 2rem; }
+  .connect-card {
+    background: var(--bg2);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.5rem;
+    transition: border-color 0.2s;
+  }
+  .connect-card:hover { border-color: var(--accent-border); }
+  .connect-label { font-size: 11px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--hint); margin-bottom: 6px; }
+  .connect-val { font-size: 13px; color: var(--text); word-break: break-all; }
+  .connect-val a { color: var(--accent2); }
+
+  .footer { padding: 2rem 0; text-align: center; font-size: 12px; color: var(--hint); font-family: var(--mono); }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 1rem; }
+    .nav-links { gap: 1.2rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .exp-date { padding-top: 0; }
+    .about-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .connect-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">msk131</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#connect">Connect</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <section class="hero" id="about">
+    <div class="hero-tag">Open to Full-Stack GenAI Roles</div>
+    <h1>Mani Shankar<br>Kumar</h1>
+    <p class="hero-sub">
+      Lead Software Engineer with <strong>11+ years</strong> building distributed systems and GenAI platforms across <strong>BFSI and SaaS</strong>. Currently architecting LLM orchestration pipelines, agentic workflows, and real-time ML inference at Clearwater Analytics.
+    </p>
+    <div class="badge-row">
+      <span class="badge">11+ yrs experience</span>
+      <span class="badge">BFSI &amp; SaaS</span>
+      <span class="badge">Noida, India</span>
+      <span class="badge green">Open to work</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="https://linkedin.com/in/mrmanishankar" target="_blank">LinkedIn</a>
+      <a class="btn" href="https://github.com/msk131" target="_blank">GitHub</a>
+      <a class="btn" href="mailto:manishankarkumar131@gmail.com">Email me</a>
+    </div>
+
+    <div class="about-grid" style="margin-top: 3rem;">
+      <div class="about-cell">
+        <div class="about-cell-label">Specialisation</div>
+        <div class="about-cell-val">Distributed Systems · GenAI Architecture</div>
+      </div>
+      <div class="about-cell">
+        <div class="about-cell-label">Current role</div>
+        <div class="about-cell-val">Lead SWE – GenAI & Fullstack @ Clearwater Analytics</div>
+      </div>
+      <div class="about-cell">
+        <div class="about-cell-label">GenAI focus</div>
+        <div class="about-cell-val">RAG · LLM Orchestration · Agentic AI · Vector Search</div>
+      </div>
+      <div class="about-cell">
+        <div class="about-cell-label">Education</div>
+        <div class="about-cell-val">B.Tech CSE — Govt. Engineering College, Bikaner (2014)</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-label">Experience</div>
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <div class="exp-date">
+          <div class="exp-current">Jan 2023 – Present</div>
+          <div class="exp-company">Clearwater Analytics<br>Noida</div>
+        </div>
+        <div>
+          <div class="exp-role">Lead Software Engineer – GenAI &amp; Fullstack</div>
+          <div class="exp-highlight">
+            <div class="exp-highlight-label">GenAI impact</div>
+            <div class="exp-highlight-text">Delivered two production GenAI systems: a cash reconciliation engine (AWS Lambda + multithreading) and an external transaction prediction engine using ML-based matching — reducing manual intervention by ~40%.</div>
+          </div>
+          <div class="exp-desc">
+            Sub-architected a U2S data pipeline from scratch, establishing foundational infrastructure patterns adopted platform-wide. Integrated LLM-based extraction into document workflows using LangChain and Azure AI Search with structured output validation and hallucination mitigation. Optimized retrieval latency and LLM token costs through embedding pipeline and chunking tuning. Strengthened observability with CloudWatch, OpenSearch, and Dynatrace.
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">LangChain</span>
+            <span class="exp-tag">Azure OpenAI</span>
+            <span class="exp-tag">Azure AI Search</span>
+            <span class="exp-tag">AWS Lambda</span>
+            <span class="exp-tag">RAG</span>
+            <span class="exp-tag">Java</span>
+            <span class="exp-tag">Python</span>
+            <span class="exp-tag">Kafka</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">
+          <div>Jan 2021 – Oct 2022</div>
+          <div class="exp-company">Capgemini<br>Gurgaon</div>
+        </div>
+        <div>
+          <div class="exp-role">Fullstack Technical Lead</div>
+          <div class="exp-desc">
+            Led fullstack development of the BWNMS project on Spring Boot microservices. Designed secure API gateway integrations using Kong and Keycloak across 10+ services. Guided CI/CD enhancements and performance tuning, increasing release efficiency by 40%. Mentored engineers on scalable backend and distributed system design.
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">Spring Boot</span>
+            <span class="exp-tag">Kong</span>
+            <span class="exp-tag">Keycloak</span>
+            <span class="exp-tag">Microservices</span>
+            <span class="exp-tag">CI/CD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">
+          <div>Jan 2018 – Jan 2021</div>
+          <div class="exp-company">Societe Generale<br>Bangalore</div>
+        </div>
+        <div>
+          <div class="exp-role">Senior Associate – Backend Engineering</div>
+          <div class="exp-desc">
+            Developed Java Spring APIs for high-traffic financial applications. Optimized Oracle-backed systems, reducing query load times by 30%. Led monolith-to-microservices migration, improving scalability and uptime. Automated deployment processes, increasing release efficiency by 40%. Contributed to compliance-critical reporting and distributed transaction systems.
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">Java</span>
+            <span class="exp-tag">Spring</span>
+            <span class="exp-tag">Oracle</span>
+            <span class="exp-tag">Microservices</span>
+            <span class="exp-tag">Distributed Tx</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">
+          <div>Jan 2014 – Jan 2018</div>
+          <div class="exp-company">TCS<br>Gurgaon</div>
+        </div>
+        <div>
+          <div class="exp-role">Fullstack Software Engineer</div>
+          <div class="exp-desc">
+            Built and maintained RESTful APIs for a multinational bank using Spring Boot and Hibernate, supporting high-volume transaction workflows. Contributed to monolith-to-services migration. Built Angular frontend modules serving 10,000+ users across banking portals.
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">Java</span>
+            <span class="exp-tag">Spring Boot</span>
+            <span class="exp-tag">Hibernate</span>
+            <span class="exp-tag">Angular</span>
+            <span class="exp-tag">REST</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-label">Skills</div>
+    <div class="skills-section">
+      <div class="skill-group">
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Kotlin</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Backend &amp; Frameworks</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Spring Boot</span>
+          <span class="skill-tag">Quarkus</span>
+          <span class="skill-tag">Hibernate</span>
+          <span class="skill-tag">gRPC</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Multithreading</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">GenAI &amp; AI/ML</div>
+        <div class="skill-tags">
+          <span class="skill-tag accent">RAG Architecture</span>
+          <span class="skill-tag accent">LLM Orchestration</span>
+          <span class="skill-tag accent">LangChain</span>
+          <span class="skill-tag accent">LangGraph</span>
+          <span class="skill-tag accent">Azure OpenAI</span>
+          <span class="skill-tag accent">Azure AI Search</span>
+          <span class="skill-tag accent">Vector Search</span>
+          <span class="skill-tag accent">Embeddings</span>
+          <span class="skill-tag accent">Prompt Engineering</span>
+          <span class="skill-tag accent">Agentic AI</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Cloud &amp; DevOps</div>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS Lambda</span>
+          <span class="skill-tag">AWS S3</span>
+          <span class="skill-tag">DynamoDB</span>
+          <span class="skill-tag">Azure</span>
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Terraform</span>
+          <span class="skill-tag">CI/CD</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Data &amp; Databases</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Apache Kafka</span>
+          <span class="skill-tag">Apache Spark</span>
+          <span class="skill-tag">OpenSearch</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Redis</span>
+          <span class="skill-tag">Oracle</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Architecture</div>
+        <div class="skill-tags">
+          <span class="skill-tag purple">Distributed Systems</span>
+          <span class="skill-tag purple">Event-Driven Design</span>
+          <span class="skill-tag purple">Domain-Driven Design</span>
+          <span class="skill-tag purple">High-Concurrency</span>
+          <span class="skill-tag purple">API Platform Design</span>
+          <span class="skill-tag purple">System Design</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="phi-card">
+      <div class="phi-title">Good backend systems are not just scalable.</div>
+      <div class="phi-item">&nbsp;&nbsp;Observable &nbsp;— you can't fix what you can't see</div>
+      <div class="phi-item">&nbsp;&nbsp;Resilient &nbsp;&nbsp;— graceful under pressure, not brittle</div>
+      <div class="phi-item">&nbsp;&nbsp;Evolvable &nbsp;&nbsp;— built to outlast the team that built it</div>
+      <div class="phi-comment">// ship less · think more · automate everything</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-label">Featured Projects</div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-title">Distributed Service Mesh</div>
+        <div class="project-desc">Eureka, Zuul, and Hystrix-based service mesh for fault-tolerant microservices. Circuit breakers, service discovery, and dynamic routing at scale.</div>
+        <a class="project-link" href="https://github.com/msk131/EurekaServer" target="_blank">github.com/msk131/EurekaServer →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Event Streaming Pipeline</div>
+        <div class="project-desc">Real-time data pipelines using Apache Kafka and Spring Boot, handling millions of events with guaranteed delivery and back-pressure management.</div>
+        <a class="project-link" href="https://github.com/msk131/spring-boot-apache-kafka" target="_blank">github.com/msk131 →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Cloud Infrastructure</div>
+        <div class="project-desc">Dynamic reverse proxy configurations with Consul and Nginx on Kubernetes. Zero-downtime deployments with automated service registration.</div>
+        <a class="project-link" href="https://github.com/msk131/nginx-consul-template" target="_blank">github.com/msk131 →</a>
+      </div>
+      <div class="project-card" style="border-color: rgba(29,158,117,0.25); background: rgba(29,158,117,0.05);">
+        <div style="font-size: 10px; font-family: var(--mono); color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Production GenAI</div>
+        <div class="project-title">Cash Reconciliation Engine</div>
+        <div class="project-desc">ML-based matching algorithms for automated reconciliation of unmatched financial entries — reduced manual intervention by ~40% in a compliance-sensitive environment.</div>
+        <span style="font-size: 12px; font-family: var(--mono); color: var(--hint);">Clearwater Analytics (private)</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 1.5rem; padding: 1rem 1.25rem; background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <div style="font-size: 13px; font-weight: 500;">DevCon — 2nd Place</div>
+        <div style="font-size: 12px; color: var(--muted);">Clearwater Analytics Engineering Event</div>
+      </div>
+      <div style="font-size: 11px; font-family: var(--mono); color: var(--accent); background: var(--accent-bg); border: 0.5px solid var(--accent-border); padding: 4px 12px; border-radius: 999px;">Achievement</div>
+    </div>
+  </section>
+
+  <section id="connect">
+    <div class="section-label">Let's connect</div>
+    <p style="font-size: 16px; color: var(--muted); max-width: 500px; margin-bottom: 0;">
+      Currently building full-stack GenAI systems — from vector DBs to agentic workflows. Open to GenAI and AI platform engineering roles.
+    </p>
+    <div class="connect-grid">
+      <div class="connect-card">
+        <div class="connect-label">Email</div>
+        <div class="connect-val"><a href="mailto:manishankarkumar131@gmail.com">manishankarkumar131@gmail.com</a></div>
+      </div>
+      <div class="connect-card">
+        <div class="connect-label">LinkedIn</div>
+        <div class="connect-val"><a href="https://linkedin.com/in/mrmanishankar" target="_blank">linkedin.com/in/mrmanishankar</a></div>
+      </div>
+      <div class="connect-card">
+        <div class="connect-label">GitHub</div>
+        <div class="connect-val"><a href="https://github.com/msk131" target="_blank">github.com/msk131</a></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="footer">
+  Built with HTML &nbsp;·&nbsp; Hosted on GitHub Pages &nbsp;·&nbsp; Mani Shankar Kumar © 2026
+</div>
+
+</body>
+</html>
