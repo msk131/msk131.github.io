@@ -43,7 +43,6 @@
     z-index: 100;
   }
   .nav-logo { font-family: var(--mono); font-size: 13px; color: rgba(255,255,255,0.9); letter-spacing: 0.05em; }
-  .nav-logo span { color: #7DD3FC; }
   .nav-links { display: flex; gap: 2rem; }
   .nav-links a { font-family: var(--mono); font-size: 12px; color: rgba(255,255,255,0.6); text-decoration: none; letter-spacing: 0.04em; transition: color 0.15s; }
   .nav-links a:hover { color: #fff; }
@@ -70,7 +69,6 @@
 
   .hero { padding: 5rem 0 4rem; }
   .hero-eyebrow { font-family: var(--mono); font-size: 12px; color: var(--navy); letter-spacing: 0.08em; margin-bottom: 1.25rem; }
-  .hero-eyebrow::before { content: '// '; color: var(--hint); }
   h1 { font-family: var(--sans); font-size: clamp(40px, 6vw, 66px); font-weight: 600; line-height: 1.05; color: var(--text); letter-spacing: -1px; margin-bottom: 1.25rem; }
   h1 em { color: var(--navy); font-style: normal; }
   .hero-sub { font-size: 16px; color: var(--muted); max-width: 560px; line-height: 1.75; margin-bottom: 2rem; }
@@ -160,7 +158,7 @@
 <body>
 
 <nav>
-  <div class="nav-logo"><span>//</span> msk131</div>
+  <div class="nav-logo">msk131</div>
   <div class="nav-links">
     <a href="#about">about</a>
     <a href="#experience">experience</a>
@@ -177,7 +175,7 @@
 <div class="container">
 
   <section class="hero" id="about">
-    <div class="hero-eyebrow">mani shankar kumar · lead swe · genai platform</div>
+    <div class="hero-eyebrow">mani shankar kumar &middot; lead swe &middot; genai platform</div>
     <h1>Engineering<br><em>GenAI</em> at Scale</h1>
     <p class="hero-sub">
       Lead Software Engineer with <strong>11+ years</strong> building distributed systems and GenAI platforms across <strong>BFSI and SaaS</strong>. Architecting LLM pipelines, agentic workflows, and high-concurrency backends at Clearwater Analytics.
@@ -197,9 +195,9 @@
         <div class="t-dot" style="background:#28C840"></div>
       </div>
       <div class="terminal-body">
-        <div><span class="tc">// engineer.profile</span></div>
+        <div><span class="tc">engineer.profile</span></div>
         <div><span class="tk">const</span> <span class="tv">mani</span> <span class="tp">= {</span></div>
-        <div>&nbsp;&nbsp;<span class="tk">role</span><span class="tp">:</span> <span class="ts">"Lead SWE – GenAI &amp; Distributed Systems"</span><span class="tp">,</span></div>
+        <div>&nbsp;&nbsp;<span class="tk">role</span><span class="tp">:</span> <span class="ts">"Lead SWE &ndash; GenAI &amp; Distributed Systems"</span><span class="tp">,</span></div>
         <div>&nbsp;&nbsp;<span class="tk">stack</span><span class="tp">:</span> <span class="ts">["Java", "Python", "LangChain", "Kafka", "K8s"]</span><span class="tp">,</span></div>
         <div>&nbsp;&nbsp;<span class="tk">genai</span><span class="tp">:</span> <span class="ts">["RAG", "LLM Orchestration", "Agentic AI", "VectorDB"]</span><span class="tp">,</span></div>
         <div>&nbsp;&nbsp;<span class="tk">openToWork</span><span class="tp">:</span> <span class="tb">true</span></div>
@@ -220,14 +218,14 @@
 
       <div class="exp-item">
         <div>
-          <div class="exp-date"><span class="current">Jan 2023 – Present</span></div>
+          <div class="exp-date"><span class="current">Jan 2023 &ndash; Present</span></div>
           <div class="exp-company">Clearwater Analytics<br>Noida, India</div>
         </div>
         <div>
-          <div class="exp-role">Lead Software Engineer – GenAI &amp; Fullstack</div>
+          <div class="exp-role">Lead Software Engineer &ndash; GenAI &amp; Fullstack</div>
           <div class="exp-highlight">
             <div class="exp-hl-label">GenAI Impact</div>
-            <div class="exp-hl-text">Delivered two production GenAI systems: cash reconciliation engine (AWS Lambda + multithreading) and external transaction prediction using ML-based matching — reducing manual intervention by ~40%.</div>
+            <div class="exp-hl-text">Delivered two production GenAI systems: cash reconciliation engine (AWS Lambda + multithreading) and external transaction prediction using ML-based matching &mdash; reducing manual intervention by ~40%.</div>
           </div>
           <div class="exp-desc">Sub-architected U2S data pipeline from scratch, establishing foundational patterns adopted platform-wide. Integrated LLM-based extraction via LangChain and Azure AI Search with hallucination mitigation. Optimized embedding pipelines and chunking for retrieval latency and token cost. Enhanced observability with CloudWatch, OpenSearch, and Dynatrace.</div>
           <div class="exp-tags">
@@ -238,7 +236,7 @@
 
       <div class="exp-item">
         <div>
-          <div class="exp-date">Jan 2021 – Oct 2022</div>
+          <div class="exp-date">Jan 2021 &ndash; Oct 2022</div>
           <div class="exp-company">Capgemini<br>Gurgaon, India</div>
         </div>
         <div>
@@ -252,11 +250,11 @@
 
       <div class="exp-item">
         <div>
-          <div class="exp-date">Jan 2018 – Jan 2021</div>
+          <div class="exp-date">Jan 2018 &ndash; Jan 2021</div>
           <div class="exp-company">Societe Generale<br>Bangalore, India</div>
         </div>
         <div>
-          <div class="exp-role">Senior Associate – Backend Engineering</div>
+          <div class="exp-role">Senior Associate &ndash; Backend Engineering</div>
           <div class="exp-desc">Developed Java Spring APIs for high-traffic financial applications. Optimized Oracle-backed systems reducing query load times by 30%. Led monolith-to-microservices migration improving scalability and uptime. Automated deployments increasing release efficiency by 40%. Contributed to compliance-critical reporting workflows and distributed transactions.</div>
           <div class="exp-tags">
             <span class="exp-tag">Java</span><span class="exp-tag">Spring</span><span class="exp-tag">Oracle</span><span class="exp-tag">Microservices</span><span class="exp-tag">Distributed Tx</span>
@@ -266,7 +264,7 @@
 
       <div class="exp-item">
         <div>
-          <div class="exp-date">Jan 2014 – Jan 2018</div>
+          <div class="exp-date">Jan 2014 &ndash; Jan 2018</div>
           <div class="exp-company">TCS<br>Gurgaon, India</div>
         </div>
         <div>
@@ -338,7 +336,7 @@
       <div><span class="ph-f">require</span><span class="ph-p">(</span><span class="ph-a">observable</span><span class="ph-p">);&nbsp;&nbsp;</span><span class="ph-c">// can't fix what you can't see</span></div>
       <div><span class="ph-f">require</span><span class="ph-p">(</span><span class="ph-a">resilient</span><span class="ph-p">);&nbsp;&nbsp;&nbsp;</span><span class="ph-c">// graceful under pressure, not brittle</span></div>
       <div><span class="ph-f">require</span><span class="ph-p">(</span><span class="ph-a">evolvable</span><span class="ph-p">);&nbsp;&nbsp;&nbsp;</span><span class="ph-c">// outlasts the team that built it</span></div>
-      <div><span class="ph-c">// ship less · think more · automate everything</span></div>
+      <div><span class="ph-c">// ship less &middot; think more &middot; automate everything</span></div>
     </div>
   </section>
 
@@ -346,34 +344,34 @@
     <div class="section-label">Projects</div>
     <div class="projects-grid">
       <div class="project-card featured">
-        <div class="proj-badge">// production · genai</div>
+        <div class="proj-badge">production &middot; genai</div>
         <div class="proj-title">Cash Reconciliation Engine</div>
         <div class="proj-desc">ML-based matching algorithms for automated reconciliation of unmatched financial entries. AWS Lambda + Java multithreading for sub-second latency. Reduced manual intervention by ~40% in a compliance-sensitive BFSI environment.</div>
         <div class="proj-link">Clearwater Analytics (private)</div>
       </div>
       <div class="project-card featured">
-        <div class="proj-badge">// production · genai</div>
+        <div class="proj-badge">production &middot; genai</div>
         <div class="proj-title">LLM Document Extraction</div>
         <div class="proj-desc">LLM-based document processing via LangChain and Azure AI Search. Structured output validation with hallucination mitigation and optimized embedding chunking strategies for production latency targets.</div>
         <div class="proj-link">Clearwater Analytics (private)</div>
       </div>
       <div class="project-card">
-        <div class="proj-badge">// open source</div>
+        <div class="proj-badge">open source</div>
         <div class="proj-title">Distributed Service Mesh</div>
         <div class="proj-desc">Eureka, Zuul, and Hystrix-based service mesh for fault-tolerant microservices. Circuit breakers, service discovery, and dynamic routing at scale.</div>
-        <a class="proj-link" href="https://github.com/msk131/EurekaServer" target="_blank">github.com/msk131/EurekaServer →</a>
+        <a class="proj-link" href="https://github.com/msk131/EurekaServer" target="_blank">github.com/msk131/EurekaServer &rarr;</a>
       </div>
       <div class="project-card">
-        <div class="proj-badge">// open source</div>
+        <div class="proj-badge">open source</div>
         <div class="proj-title">Event Streaming Pipeline</div>
         <div class="proj-desc">Real-time data pipelines using Apache Kafka and Spring Boot. Millions of events with guaranteed delivery, back-pressure management, and consumer group coordination.</div>
-        <a class="proj-link" href="https://github.com/msk131" target="_blank">github.com/msk131 →</a>
+        <a class="proj-link" href="https://github.com/msk131" target="_blank">github.com/msk131 &rarr;</a>
       </div>
     </div>
     <div class="award-bar">
       <div>
-        <div style="font-size:14px;font-weight:600;">DevCon — 2nd Place</div>
-        <div style="font-size:12px;color:var(--muted);">Clearwater Analytics Engineering Event · Consistently rated high-performing across organizations</div>
+        <div style="font-size:14px;font-weight:600;">DevCon &mdash; 2nd Place</div>
+        <div style="font-size:12px;color:var(--muted);">Clearwater Analytics Engineering Event &middot; Consistently rated high-performing across organizations</div>
       </div>
       <div class="award-pill">Achievement</div>
     </div>
@@ -382,7 +380,7 @@
   <section id="connect">
     <div class="section-label">Connect</div>
     <p style="font-size:15px;color:var(--muted);max-width:520px;margin-bottom:0;">
-      Currently building full-stack GenAI systems — from vector DBs to agentic workflows. Open to GenAI and AI platform engineering roles.
+      Currently building full-stack GenAI systems &mdash; from vector DBs to agentic workflows. Open to GenAI and AI platform engineering roles.
     </p>
     <div class="connect-grid">
       <div class="connect-card">
@@ -403,7 +401,7 @@
 </div>
 
 <div class="footer">
-  &copy; 2026 Mani Shankar Kumar &nbsp;·&nbsp; Host free on GitHub Pages at msk131.github.io
+  &copy; 2026 Mani Shankar Kumar &nbsp;&middot;&nbsp; msk131.github.io
 </div>
 
 </body>
