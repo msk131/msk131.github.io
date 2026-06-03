@@ -2,9 +2,9 @@
 
 # Mani Shankar Kumar
 
-**Staff Backend Engineer · Distributed Systems · GenAI**
+**Staff Backend Engineer | Distributed Systems | GenAI**
 
-![Experience](https://img.shields.io/badge/Experience-12%2B%20Years-black?style=flat-square)
+![Experience](https://img.shields.io/badge/Experience-11%2B%20Years-black?style=flat-square)
 ![Domain](https://img.shields.io/badge/Domain-BFSI%20%26%20SaaS-blue?style=flat-square)
 ![Location](https://img.shields.io/badge/Location-Gurgaon%2C%20India-orange?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Open%20to%20Work-brightgreen?style=flat-square)
@@ -17,120 +17,65 @@
 
 ---
 
-## 🧑‍💻 About Me
+## About
 
-Backend engineer with **12+ years** of experience building scalable distributed systems across BFSI and SaaS platforms.
+Backend engineer with 11+ years of experience building scalable distributed
+systems across BFSI and SaaS platforms. I focus on backend architecture,
+event-driven systems, cloud-native services, and production GenAI applications.
 
-- 🏗️ Architect of **microservices** and **event-driven platforms** at scale
-- ⚡ Expert in **high-concurrency backend systems** handling millions of TPS
-- 🤖 Building **GenAI platforms** — RAG pipelines, LLM orchestration, vector search
-- ☁️ Cloud-native on **AWS** and **Azure** with Kubernetes-first deployments
-- 🔬 Currently exploring **LangGraph**, **agentic AI**, and **real-time ML inference**
+Current focus:
 
----
+- GenAI backend platforms and LLM orchestration
+- RAG pipelines, embeddings, and search
+- FastAPI, Java/Spring Boot, cloud-native services
+- High-throughput distributed systems
 
-## 🛠️ Core Skills
+## Skills
 
-**Languages & Frameworks**
+**Languages and frameworks:** Java, Python, Go, Spring Boot, FastAPI
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+**Cloud and platform:** AWS, Azure, Docker, Kubernetes
 
-**Cloud & DevOps**
+**Data and messaging:** Kafka, RabbitMQ, PostgreSQL, Redis, MongoDB, Cassandra
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+**GenAI:** RAG, vector search, embeddings, prompt pipelines, LLM orchestration
 
-**Messaging & Databases**
+## Featured Project
 
-![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
-![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Cassandra](https://img.shields.io/badge/Cassandra-1287B1?style=flat-square&logo=apachecassandra&logoColor=white)
+### Email Context Service
 
-**GenAI Stack**
+Backend API for CPA firms to capture client email conversations, generate
+summaries, search prior context, and ask questions over firm-scoped email data.
 
-![LangChain](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-`RAG` &nbsp; `VectorDB` &nbsp; `LLM Orchestration` &nbsp; `Embedding Pipelines`
+Repository: [github.com/msk131/email-context-service](https://github.com/msk131/email-context-service)
 
----
+Highlights:
 
-## 🤖 GenAI & LLM Orchestration
+- FastAPI backend with async SQLAlchemy and Alembic migrations
+- Clean auth model with users, firm memberships, accountant profiles, firms, and clients
+- JWT authentication with role-based firm access
+- Mock Microsoft Graph-style email ingestion
+- LLM-backed summaries, search, and conversational Q&A
+- Background task records, caching, rate limits, and Prometheus metrics
+- Pytest coverage for auth, services, schemas, tasks, cache, and API behavior
 
-Architecting the next generation of AI platforms:
+## Other Projects
 
-| Area | What I build |
-|---|---|
-| **Scalable RAG** | Hybrid search and optimized embedding pipelines for production |
-| **Agentic AI** | Multi-agent systems for complex business workflows using LangGraph |
-| **Performance** | LLM latency and token usage optimization for high-throughput environments |
+- [Distributed Mesh](https://github.com/msk131/EurekaServer) - Eureka, Zuul, and Hystrix-based microservice mesh.
+- [Event Streaming](https://github.com/msk131/spring-boot-apache-kafka) - Kafka and Spring Boot event pipeline examples.
+- [Cloud Infrastructure](https://github.com/msk131/nginx-consul-template) - Dynamic reverse proxy configuration with Consul and Nginx.
 
----
-
-## 🏛️ Engineering Philosophy
-
-```
-Good backend systems are not just scalable.
-
-  ◆ Observable  —  you can't fix what you can't see
-  ◆ Resilient   —  graceful under pressure, not brittle
-  ◆ Evolvable   —  built to outlast the team that built it
-
-// ship less · think more · automate everything
-```
-
-**Resilience First:** Designing for failure with circuit breakers and graceful degradation.
-
-**Data Integrity:** Managing eventual consistency in high-throughput event-driven systems.
-
-**Staff Leadership:** Bridging the gap between business requirements and scalable infrastructure.
-
----
-
-## ⭐ Featured Projects
-
-**🧩 [Distributed Mesh](https://github.com/msk131/EurekaServer)**
-Eureka, Zuul, and Hystrix-based service mesh for fault-tolerant microservices at scale.
-
-**⚡ [Event Streaming](https://github.com/msk131/spring-boot-apache-kafka)**
-Real-time data pipelines using Kafka and Spring Boot handling millions of events.
-
-**☁️ [Cloud Infrastructure](https://github.com/msk131/nginx-consul-template)**
-Dynamic reverse proxy configurations with Consul and Nginx on Kubernetes.
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-![Mani's GitHub Stats](https://github-readme-stats.vercel.app/api?username=msk131&show_icons=true&theme=default&hide_border=true&count_private=true)
-&nbsp;&nbsp;
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=msk131&layout=compact&theme=default&hide_border=true)
-
-![Contribution Streak](https://github-readme-streak-stats.herokuapp.com/?user=msk131&theme=default&hide_border=true)
-
-</div>
-
----
-
-## 📬 Let's Connect
+## Connect
 
 | Platform | Link |
-|---|---|
-| 📧 Email | [manishankarkumar131@gmail.com](mailto:manishankarkumar131@gmail.com) |
-| 💼 LinkedIn | [linkedin.com/in/mrmanishankar](https://linkedin.com/in/mrmanishankar) |
-| 🐙 GitHub | [github.com/msk131](https://github.com/msk131) |
+| --- | --- |
+| Email | [manishankarkumar131@gmail.com](mailto:manishankarkumar131@gmail.com) |
+| LinkedIn | [linkedin.com/in/mrmanishankar](https://linkedin.com/in/mrmanishankar) |
+| GitHub | [github.com/msk131](https://github.com/msk131) |
 
 <div align="center">
 
-*Currently building **Full-Stack GenAI systems** — LLM orchestration, agentic pipelines, and real-time inference — open to GenAI engineering opportunities.*
+Currently building backend and GenAI systems for real-world business workflows.
 
 ![Profile Views](https://komarev.com/ghpvc/?username=msk131&color=brightgreen&style=flat-square)
 
