@@ -1,427 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mani Shankar Kumar — GenAI Platform Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --bg: #EEF3FB;
-    --bg2: #ffffff;
-    --bg3: #E2EAF6;
-    --navy: #1848A0;
-    --navy-dark: #0F2F6E;
-    --navy-light: #D0DEFA;
-    --text: #0A1628;
-    --muted: #4A6080;
-    --hint: #8AA0BC;
-    --border: #C5D4EC;
-    --border2: #A8BFE0;
-    --green: #16A34A;
-    --mono: 'IBM Plex Mono', monospace;
-    --sans: 'IBM Plex Sans', sans-serif;
-    --radius: 6px;
-    --radius-lg: 10px;
-  }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--sans); background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.7; }
-  a { color: var(--navy); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  nav {
-    background: var(--navy);
-    padding: 0 2rem;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .nav-logo { font-family: var(--mono); font-size: 13px; color: rgba(255,255,255,0.9); letter-spacing: 0.05em; }
-  .nav-links { display: flex; gap: 2rem; }
-  .nav-links a { font-family: var(--mono); font-size: 12px; color: rgba(255,255,255,0.6); text-decoration: none; letter-spacing: 0.04em; transition: color 0.15s; }
-  .nav-links a:hover { color: #fff; }
-  .nav-status { display: flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 11px; color: rgba(255,255,255,0.5); }
-  .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ADE80; animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
-
-  .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
-  section { padding: 4.5rem 0; border-bottom: 1px solid var(--border); }
-  section:last-child { border-bottom: none; }
-
-  .section-label {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--navy);
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
-  .hero { padding: 5rem 0 4rem; }
-  .hero-eyebrow { font-family: var(--mono); font-size: 12px; color: var(--navy); letter-spacing: 0.08em; margin-bottom: 1.25rem; }
-  h1 { font-family: var(--sans); font-size: clamp(40px, 6vw, 66px); font-weight: 600; line-height: 1.05; color: var(--text); letter-spacing: -1px; margin-bottom: 1.25rem; }
-  h1 em { color: var(--navy); font-style: normal; }
-  .hero-sub { font-size: 16px; color: var(--muted); max-width: 560px; line-height: 1.75; margin-bottom: 2rem; }
-  .hero-sub strong { color: var(--text); font-weight: 500; }
-
-  .meta-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 2rem; }
-  .meta-cell { background: var(--bg2); padding: 14px 18px; }
-  .meta-label { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--hint); margin-bottom: 4px; }
-  .meta-val { font-size: 13px; font-weight: 500; color: var(--text); }
-  .meta-val.green { color: var(--green); }
-
-  .terminal-card { background: #0A1628; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 2rem; }
-  .terminal-bar { background: #060E1C; padding: 8px 14px; display: flex; align-items: center; gap: 6px; }
-  .t-dot { width: 10px; height: 10px; border-radius: 50%; }
-  .terminal-body { padding: 18px 22px; font-family: var(--mono); font-size: 13px; line-height: 2; }
-  .tc { color: #3A5070; }
-  .tk { color: #7DD3FC; }
-  .tv { color: #A5F3FC; }
-  .ts { color: #86EFAC; }
-  .tb { color: #FDE68A; }
-  .tp { color: rgba(255,255,255,0.3); }
-
-  .cta-row { display: flex; flex-wrap: wrap; gap: 10px; }
-  .btn { display: inline-block; font-family: var(--mono); font-size: 12px; font-weight: 500; padding: 9px 20px; border-radius: var(--radius); border: 1px solid var(--border2); background: var(--bg2); color: var(--text); text-decoration: none; letter-spacing: 0.03em; transition: background 0.15s, border-color 0.15s; }
-  .btn:hover { background: var(--bg3); border-color: var(--navy); text-decoration: none; }
-  .btn.primary { background: var(--navy); border-color: var(--navy); color: #fff; }
-  .btn.primary:hover { background: var(--navy-dark); }
-
-  .exp-list { display: flex; flex-direction: column; }
-  .exp-item { display: grid; grid-template-columns: 160px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--border); }
-  .exp-item:last-child { border-bottom: none; }
-  .exp-date { font-family: var(--mono); font-size: 11px; color: var(--hint); line-height: 1.7; }
-  .exp-date .current { color: var(--navy); font-weight: 500; }
-  .exp-company { font-size: 12px; font-weight: 500; color: var(--muted); margin-top: 4px; }
-  .exp-role { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
-  .exp-highlight { background: var(--navy-light); border-left: 3px solid var(--navy); border-radius: 0 var(--radius) var(--radius) 0; padding: 10px 14px; margin-bottom: 12px; }
-  .exp-hl-label { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--navy); margin-bottom: 3px; }
-  .exp-hl-text { font-size: 13px; color: var(--text); line-height: 1.6; }
-  .exp-desc { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 12px; }
-  .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .exp-tag { font-family: var(--mono); font-size: 11px; padding: 3px 9px; border-radius: 3px; border: 1px solid var(--border); color: var(--muted); background: var(--bg2); }
-
-  .skills-wrapper { display: flex; flex-direction: column; gap: 20px; }
-  .skill-row-label { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--hint); margin-bottom: 8px; }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
-  .skill-chip { font-size: 13px; padding: 5px 14px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--bg2); color: var(--text); }
-  .skill-chip.primary { background: var(--navy); border-color: var(--navy); color: #fff; font-family: var(--mono); font-size: 12px; }
-  .skill-chip.secondary { background: var(--navy-light); border-color: var(--border2); color: var(--navy-dark); }
-
-  .phi-block { background: #0A1628; border-radius: var(--radius-lg); padding: 1.75rem 2rem; font-family: var(--mono); font-size: 13px; line-height: 2.1; margin-top: 2.5rem; }
-  .ph-c { color: #3A5070; }
-  .ph-f { color: #7DD3FC; }
-  .ph-a { color: #A5F3FC; }
-  .ph-s { color: #86EFAC; }
-  .ph-p { color: rgba(255,255,255,0.25); }
-
-  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .project-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; transition: border-color 0.15s; }
-  .project-card:hover { border-color: var(--navy); }
-  .project-card.featured { border-color: var(--navy); background: var(--navy-light); }
-  .proj-badge { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--navy); margin-bottom: 8px; }
-  .proj-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
-  .proj-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
-  .proj-link { font-family: var(--mono); font-size: 11px; color: var(--navy); }
-
-  .award-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1rem 1.25rem; margin-top: 14px; }
-  .award-pill { font-family: var(--mono); font-size: 10px; color: var(--navy); background: var(--navy-light); border: 1px solid var(--border2); padding: 4px 12px; border-radius: 999px; }
-
-  .connect-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 2rem; }
-  .connect-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; transition: border-color 0.15s; }
-  .connect-card:hover { border-color: var(--navy); }
-  .connect-label { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--hint); margin-bottom: 6px; }
-  .connect-val { font-size: 13px; color: var(--text); word-break: break-all; }
-  .connect-val a { color: var(--navy); }
-
-  .footer { padding: 2rem 0; text-align: center; font-family: var(--mono); font-size: 11px; color: var(--hint); border-top: 1px solid var(--border); }
-
-  @media (max-width: 700px) {
-    .nav-links, .nav-status { display: none; }
-    h1 { font-size: 36px; }
-    .meta-grid { grid-template-columns: 1fr 1fr; }
-    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
-    .projects-grid, .connect-grid { grid-template-columns: 1fr; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mani Shankar Kumar</title>
 </head>
 <body>
 
-<nav>
-  <div class="nav-logo">msk131</div>
-  <div class="nav-links">
-    <a href="#about">about</a>
-    <a href="#experience">experience</a>
-    <a href="#skills">skills</a>
-    <a href="#projects">projects</a>
-    <a href="#connect">connect</a>
-  </div>
-  <div class="nav-status">
-    <div class="status-dot"></div>
-    open_to_work: true
-  </div>
-</nav>
+  <div align="center">
+    <h1>Mani Shankar Kumar</h1>
 
-<div class="container">
+    <p><strong>Staff Backend Engineer | Distributed Systems | GenAI</strong></p>
 
-  <section class="hero" id="about">
-    <div class="hero-eyebrow">mani shankar kumar &middot; lead swe &middot; genai platform</div>
-    <h1>Engineering<br><em>GenAI</em> at Scale</h1>
-    <p class="hero-sub">
-      Lead Software Engineer with <strong>11+ years</strong> building distributed systems and GenAI platforms across <strong>BFSI and SaaS</strong>. Architecting LLM pipelines, agentic workflows, and high-concurrency backends at Clearwater Analytics.
+    <p>
+      <img src="https://img.shields.io/badge/Experience-12%2B%20Years-black?style=flat-square" alt="Experience" />
+      <img src="https://img.shields.io/badge/Domain-BFSI%20%26%20SaaS-blue?style=flat-square" alt="Domain" />
+      <img src="https://img.shields.io/badge/Location-Gurgaon%2C%20India-orange?style=flat-square" alt="Location" />
+      <img src="https://img.shields.io/badge/Status-Open%20to%20Work-brightgreen?style=flat-square" alt="Status" />
     </p>
 
-    <div class="meta-grid">
-      <div class="meta-cell"><div class="meta-label">Experience</div><div class="meta-val">11+ Years</div></div>
-      <div class="meta-cell"><div class="meta-label">Current</div><div class="meta-val">Clearwater Analytics</div></div>
-      <div class="meta-cell"><div class="meta-label">Location</div><div class="meta-val">Noida, India</div></div>
-      <div class="meta-cell"><div class="meta-label">Status</div><div class="meta-val green">Open to Work</div></div>
-    </div>
-
-    <div class="terminal-card">
-      <div class="terminal-bar">
-        <div class="t-dot" style="background:#FF5F57"></div>
-        <div class="t-dot" style="background:#FFBD2E"></div>
-        <div class="t-dot" style="background:#28C840"></div>
-      </div>
-      <div class="terminal-body">
-        <div><span class="tc">engineer.profile</span></div>
-        <div><span class="tk">const</span> <span class="tv">mani</span> <span class="tp">= {</span></div>
-        <div>&nbsp;&nbsp;<span class="tk">role</span><span class="tp">:</span> <span class="ts">"Lead SWE &ndash; GenAI &amp; Distributed Systems"</span><span class="tp">,</span></div>
-        <div>&nbsp;&nbsp;<span class="tk">stack</span><span class="tp">:</span> <span class="ts">["Java", "Python", "LangChain", "Kafka", "K8s"]</span><span class="tp">,</span></div>
-        <div>&nbsp;&nbsp;<span class="tk">genai</span><span class="tp">:</span> <span class="ts">["RAG", "LLM Orchestration", "Agentic AI", "VectorDB"]</span><span class="tp">,</span></div>
-        <div>&nbsp;&nbsp;<span class="tk">openToWork</span><span class="tp">:</span> <span class="tb">true</span></div>
-        <div><span class="tp">}</span></div>
-      </div>
-    </div>
-
-    <div class="cta-row">
-      <a class="btn primary" href="https://linkedin.com/in/mrmanishankar" target="_blank">linkedin.com/in/mrmanishankar</a>
-      <a class="btn" href="https://github.com/msk131" target="_blank">github.com/msk131</a>
-      <a class="btn" href="mailto:manishankarkumar131@gmail.com">manishankarkumar131@gmail.com</a>
-    </div>
-  </section>
-
-  <section id="experience">
-    <div class="section-label">Experience</div>
-    <div class="exp-list">
-
-      <div class="exp-item">
-        <div>
-          <div class="exp-date"><span class="current">Jan 2023 &ndash; Present</span></div>
-          <div class="exp-company">Clearwater Analytics<br>Noida, India</div>
-        </div>
-        <div>
-          <div class="exp-role">Lead Software Engineer &ndash; GenAI &amp; Fullstack</div>
-          <div class="exp-highlight">
-            <div class="exp-hl-label">Key Impact</div>
-            <div class="exp-hl-text">Delivered Cash Break (AWS Lambda + Java multithreading) and an ML-based transaction prediction engine &mdash; reducing manual reconciliation intervention by ~40%. Sub-architected U2S pipeline and Onboarding Agent; recognized as a key technical contributor for GenAI platform initiatives.</div>
-          </div>
-          <div class="exp-desc">Built a Cash Break system using AWS Lambda and Java multithreading, enabling high-throughput parallel processing of financial transactions with sub-second latency at scale. Designed and delivered an external transaction prediction engine leveraging ML-based matching algorithms to automate reconciliation of unmatched entries, reducing manual intervention by ~40%. Sub-architected the U2S data pipeline &amp; Onboarding Agent from the ground up, establishing foundational infrastructure patterns adopted across the platform. Integrated LLM-based extraction into document processing workflows using LangChain and Azure AI Search; implemented structured output validation and hallucination mitigation strategies. Optimized retrieval latency and LLM token costs through tuning of embedding pipelines and chunking strategies. Strengthened observability using CloudWatch, OpenSearch, and Dynatrace.</div>
-          <div class="exp-tags">
-            <span class="exp-tag">LangChain</span><span class="exp-tag">LangGraph</span><span class="exp-tag">Azure OpenAI</span><span class="exp-tag">Azure AI Search</span><span class="exp-tag">AWS Lambda</span><span class="exp-tag">RAG</span><span class="exp-tag">Java</span><span class="exp-tag">Python</span><span class="exp-tag">Kafka</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-item">
-        <div>
-          <div class="exp-date">Jan 2021 &ndash; Oct 2022</div>
-          <div class="exp-company">Capgemini<br>Gurgaon, India</div>
-        </div>
-        <div>
-          <div class="exp-role">Fullstack Technical Lead</div>
-          <div class="exp-desc">Led fullstack development of BWNMS project on Spring Boot microservices. Designed secure API gateway integrations using Kong and Keycloak across 10+ services. CI/CD enhancements and performance tuning increased release efficiency by 40%. Mentored engineers on distributed system design best practices.</div>
-          <div class="exp-tags">
-            <span class="exp-tag">Spring Boot</span><span class="exp-tag">Kong</span><span class="exp-tag">Keycloak</span><span class="exp-tag">Microservices</span><span class="exp-tag">CI/CD</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-item">
-        <div>
-          <div class="exp-date">Jan 2018 &ndash; Jan 2021</div>
-          <div class="exp-company">Societe Generale<br>Bangalore, India</div>
-        </div>
-        <div>
-          <div class="exp-role">Senior Associate &ndash; Backend Engineering</div>
-          <div class="exp-desc">Developed Java Spring APIs for high-traffic financial applications. Optimized Oracle-backed systems reducing query load times by 30%. Led monolith-to-microservices migration improving scalability and uptime. Automated deployments increasing release efficiency by 40%. Contributed to compliance-critical reporting workflows and distributed transactions.</div>
-          <div class="exp-tags">
-            <span class="exp-tag">Java</span><span class="exp-tag">Spring</span><span class="exp-tag">Oracle</span><span class="exp-tag">Microservices</span><span class="exp-tag">Distributed Tx</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-item">
-        <div>
-          <div class="exp-date">Jan 2014 &ndash; Jan 2018</div>
-          <div class="exp-company">TCS<br>Gurgaon, India</div>
-        </div>
-        <div>
-          <div class="exp-role">Fullstack Software Engineer</div>
-          <div class="exp-desc">Built and maintained RESTful APIs for a multinational bank using Spring Boot and Hibernate, supporting high-volume transaction workflows. Contributed to monolith-to-services migration. Built Angular frontend modules serving 10,000+ users across banking portals.</div>
-          <div class="exp-tags">
-            <span class="exp-tag">Java</span><span class="exp-tag">Spring Boot</span><span class="exp-tag">Hibernate</span><span class="exp-tag">Angular</span><span class="exp-tag">REST</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="section-label">Skills</div>
-    <div class="skills-wrapper">
-      <div class="skill-row">
-        <div class="skill-row-label">GenAI &amp; AI/ML</div>
-        <div class="skill-tags">
-          <span class="skill-chip primary">RAG Architecture</span>
-          <span class="skill-chip primary">LLM Orchestration</span>
-          <span class="skill-chip primary">LangChain</span>
-          <span class="skill-chip primary">LangGraph</span>
-          <span class="skill-chip primary">Azure OpenAI</span>
-          <span class="skill-chip primary">Vector Search</span>
-          <span class="skill-chip primary">Agentic AI</span>
-          <span class="skill-chip primary">Prompt Engineering</span>
-          <span class="skill-chip primary">Embeddings</span>
-        </div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-row-label">Languages</div>
-        <div class="skill-tags">
-          <span class="skill-chip">Java</span><span class="skill-chip">Python</span><span class="skill-chip">Kotlin</span><span class="skill-chip">JavaScript</span><span class="skill-chip">TypeScript</span>
-        </div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-row-label">Backend &amp; Frameworks</div>
-        <div class="skill-tags">
-          <span class="skill-chip">Spring Boot</span><span class="skill-chip">Quarkus</span><span class="skill-chip">Hibernate</span><span class="skill-chip">gRPC</span><span class="skill-chip">REST APIs</span><span class="skill-chip">Multithreading</span><span class="skill-chip">Microservices</span>
-        </div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-row-label">Cloud &amp; DevOps</div>
-        <div class="skill-tags">
-          <span class="skill-chip secondary">AWS Lambda</span><span class="skill-chip secondary">AWS S3</span><span class="skill-chip secondary">DynamoDB</span><span class="skill-chip secondary">Azure</span><span class="skill-chip secondary">Kubernetes</span><span class="skill-chip secondary">Docker</span><span class="skill-chip secondary">Terraform</span><span class="skill-chip secondary">CI/CD</span>
-        </div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-row-label">Data &amp; Databases</div>
-        <div class="skill-tags">
-          <span class="skill-chip">Apache Kafka</span><span class="skill-chip">Apache Spark</span><span class="skill-chip">OpenSearch</span><span class="skill-chip">PostgreSQL</span><span class="skill-chip">MongoDB</span><span class="skill-chip">Redis</span><span class="skill-chip">Oracle</span>
-        </div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-row-label">Architecture</div>
-        <div class="skill-tags">
-          <span class="skill-chip">Distributed Systems</span><span class="skill-chip">Event-Driven Design</span><span class="skill-chip">Domain-Driven Design</span><span class="skill-chip">High-Concurrency</span><span class="skill-chip">System Design</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="phi-block">
-      <div><span class="ph-c">/**</span></div>
-      <div><span class="ph-c">&nbsp;* Engineering Philosophy</span></div>
-      <div><span class="ph-c">&nbsp;*/</span></div>
-      <div><span class="ph-f">assert</span><span class="ph-p">(</span><span class="ph-s">"Good systems are not just scalable"</span><span class="ph-p">);</span></div>
-      <div><span class="ph-f">require</span><span class="ph-p">(</span><span class="ph-a">observable</span><span class="ph-p">);&nbsp;&nbsp;</span><span class="ph-c">// can't fix what you can't see</span></div>
-      <div><span class="ph-f">require</span><span class="ph-p">(</span><span class="ph-a">resilient</span><span class="ph-p">);&nbsp;&nbsp;&nbsp;</span><span class="ph-c">// graceful under pressure, not brittle</span></div>
-      <div><span class="ph-f">require</span><span class="ph-p">(</span><span class="ph-a">evolvable</span><span class="ph-p">);&nbsp;&nbsp;&nbsp;</span><span class="ph-c">// outlasts the team that built it</span></div>
-      <div><span class="ph-c">// ship less &middot; think more &middot; automate everything</span></div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="section-label">Projects</div>
-    <div class="projects-grid">
-
-      <div class="project-card featured">
-        <div class="proj-badge">production &middot; backend + ml</div>
-        <div class="proj-title">Cash Break System</div>
-        <div class="proj-desc">High-throughput parallel processing of financial transactions using AWS Lambda and Java multithreading. Designed for sub-second latency at scale in a compliance-sensitive BFSI environment.</div>
-        <div class="proj-link">Clearwater Analytics (private)</div>
-      </div>
-
-      <div class="project-card featured">
-        <div class="proj-badge">production &middot; ml</div>
-        <div class="proj-title">Transaction Prediction Engine</div>
-        <div class="proj-desc">ML-based matching algorithms to automate reconciliation of unmatched external transaction entries. Reduced manual intervention by ~40%, eliminating a major operational bottleneck in financial workflows.</div>
-        <div class="proj-link">Clearwater Analytics (private)</div>
-      </div>
-
-      <div class="project-card featured">
-        <div class="proj-badge">production &middot; genai</div>
-        <div class="proj-title">U2S Data Pipeline</div>
-        <div class="proj-desc">Sub-architected from scratch — foundational infrastructure patterns adopted platform-wide. LLM-based extraction via LangChain and Azure AI Search with structured output validation and hallucination mitigation. Optimized embedding pipelines and chunking for retrieval latency and token cost.</div>
-        <div class="proj-link">Clearwater Analytics (private)</div>
-      </div>
-
-      <div class="project-card featured">
-        <div class="proj-badge">production &middot; agentic ai</div>
-        <div class="proj-title">Onboarding Agent</div>
-        <div class="proj-desc">Agentic workflow automating end-to-end client onboarding using LangGraph and Azure OpenAI. Multi-step agents handle document intake, validation, and routing — cutting manual touchpoints significantly at scale.</div>
-        <div class="proj-link">Clearwater Analytics (private)</div>
-      </div>
-
-      <div class="project-card">
-        <div class="proj-badge">open source</div>
-        <div class="proj-title">Distributed Service Mesh</div>
-        <div class="proj-desc">Eureka, Zuul, and Hystrix-based service mesh for fault-tolerant microservices. Circuit breakers, service discovery, and dynamic routing at scale.</div>
-        <a class="proj-link" href="https://github.com/msk131/EurekaServer" target="_blank">github.com/msk131/EurekaServer &rarr;</a>
-      </div>
-
-      <div class="project-card">
-        <div class="proj-badge">open source</div>
-        <div class="proj-title">Event Streaming Pipeline</div>
-        <div class="proj-desc">Real-time data pipelines using Apache Kafka and Spring Boot. Millions of events with guaranteed delivery, back-pressure management, and consumer group coordination.</div>
-        <a class="proj-link" href="https://github.com/msk131" target="_blank">github.com/msk131 &rarr;</a>
-      </div>
-
-    </div>
-    <div class="award-bar">
-      <div>
-        <div style="font-size:14px;font-weight:600;">DevCon &mdash; 2nd Place</div>
-        <div style="font-size:12px;color:var(--muted);">Clearwater Analytics Engineering Event &middot; Consistently rated high-performing across organizations</div>
-      </div>
-      <div class="award-pill">Achievement</div>
-    </div>
-  </section>
-
-  <section id="connect">
-    <div class="section-label">Connect</div>
-    <p style="font-size:15px;color:var(--muted);max-width:520px;margin-bottom:0;">
-      Currently building full-stack GenAI systems &mdash; from vector DBs to agentic workflows. Open to GenAI and AI platform engineering roles.
+    <p>
+      <a href="https://linkedin.com/in/mrmanishankar">
+        <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/msk131">
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+      </a>
+      <a href="mailto:manishankarkumar131@gmail.com">
+        <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+      </a>
     </p>
-    <div class="connect-grid">
-      <div class="connect-card">
-        <div class="connect-label">Email</div>
-        <div class="connect-val"><a href="mailto:manishankarkumar131@gmail.com">manishankarkumar131@gmail.com</a></div>
-      </div>
-      <div class="connect-card">
-        <div class="connect-label">LinkedIn</div>
-        <div class="connect-val"><a href="https://linkedin.com/in/mrmanishankar" target="_blank">linkedin.com/in/mrmanishankar</a></div>
-      </div>
-      <div class="connect-card">
-        <div class="connect-label">GitHub</div>
-        <div class="connect-val"><a href="https://github.com/msk131" target="_blank">github.com/msk131</a></div>
-      </div>
-    </div>
-  </section>
+  </div>
 
-</div>
+  <hr />
 
-<div class="footer">
-  &copy; 2026 Mani Shankar Kumar &nbsp;&middot;&nbsp; msk131.github.io
-</div>
+  <h2>About</h2>
+
+  <p>
+    Backend engineer with 12+ years of experience building scalable distributed
+    systems across BFSI and SaaS platforms. I focus on backend architecture,
+    event-driven systems, cloud-native services, and production GenAI applications.
+  </p>
+
+  <p>Current focus:</p>
+
+  <ul>
+    <li>GenAI backend platforms and LLM orchestration</li>
+    <li>RAG pipelines, embeddings, and search</li>
+    <li>FastAPI, Java/Spring Boot, cloud-native services</li>
+    <li>High-throughput distributed systems</li>
+  </ul>
+
+  <h2>Skills</h2>
+
+  <p><strong>Languages and frameworks:</strong> Java, Python, Go, Spring Boot, FastAPI</p>
+
+  <p><strong>Cloud and platform:</strong> AWS, Azure, Docker, Kubernetes</p>
+
+  <p><strong>Data and messaging:</strong> Kafka, RabbitMQ, PostgreSQL, Redis, MongoDB, Cassandra</p>
+
+  <p><strong>GenAI:</strong> RAG, vector search, embeddings, prompt pipelines, LLM orchestration</p>
+
+  <h2>Featured Project</h2>
+
+  <h3>Email Context Service</h3>
+
+  <p>
+    Backend API for CPA firms to capture client email conversations, generate
+    summaries, search prior context, and ask questions over firm-scoped email data.
+  </p>
+
+  <p>
+    Repository:
+    <a href="https://github.com/msk131/email-context-service">
+      github.com/msk131/email-context-service
+    </a>
+  </p>
+
+  <p>Highlights:</p>
+
+  <ul>
+    <li>FastAPI backend with async SQLAlchemy and Alembic migrations</li>
+    <li>Clean auth model with users, firm memberships, accountant profiles, firms, and clients</li>
+    <li>JWT authentication with role-based firm access</li>
+    <li>Mock Microsoft Graph-style email ingestion</li>
+    <li>LLM-backed summaries, search, and conversational Q&amp;A</li>
+    <li>Background task records, caching, rate limits, and Prometheus metrics</li>
+    <li>Pytest coverage for auth, services, schemas, tasks, cache, and API behavior</li>
+  </ul>
+
+  <h2>Other Projects</h2>
+
+  <ul>
+    <li>
+      <a href="https://github.com/msk131/EurekaServer">Distributed Mesh</a>
+      - Eureka, Zuul, and Hystrix-based microservice mesh.
+    </li>
+    <li>
+      <a href="https://github.com/msk131/spring-boot-apache-kafka">Event Streaming</a>
+      - Kafka and Spring Boot event pipeline examples.
+    </li>
+    <li>
+      <a href="https://github.com/msk131/nginx-consul-template">Cloud Infrastructure</a>
+      - Dynamic reverse proxy configuration with Consul and Nginx.
+    </li>
+  </ul>
+
+  <h2>Connect</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Email</td>
+        <td>
+          <a href="mailto:manishankarkumar131@gmail.com">
+            manishankarkumar131@gmail.com
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>LinkedIn</td>
+        <td>
+          <a href="https://linkedin.com/in/mrmanishankar">
+            linkedin.com/in/mrmanishankar
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>GitHub</td>
+        <td>
+          <a href="https://github.com/msk131">
+            github.com/msk131
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div align="center">
+    <p>Currently building backend and GenAI systems for real-world business workflows.</p>
+
+    <img src="https://komarev.com/ghpvc/?username=msk131&color=brightgreen&style=flat-square" alt="Profile Views" />
+  </div>
 
 </body>
 </html>
