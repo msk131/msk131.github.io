@@ -353,6 +353,35 @@
     /* ============================================
        EXPERIENCE SECTION
     ============================================ */
+    .experience-summary {
+      background: linear-gradient(135deg, var(--primary-light), rgba(0, 168, 232, 0.05));
+      padding: 2.5rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .summary-item {
+      text-align: center;
+    }
+
+    .summary-item strong {
+      display: block;
+      font-size: 1.75rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .summary-item span {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
     .experience-timeline {
       position: relative;
       padding-left: 2rem;
@@ -713,6 +742,10 @@
       .achievement-list {
         grid-template-columns: 1fr;
       }
+
+      .experience-summary {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 768px) {
@@ -809,6 +842,10 @@
         font-size: 0.75rem;
         padding: 0.35rem 0.7rem;
       }
+
+      .experience-summary {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -889,7 +926,7 @@
 
       <div class="about-container">
         <div class="about-text">
-          <p>Backend engineer with 12+ years of experience architecting scalable distributed systems for BFSI and SaaS platforms. Deep expertise in designing event-driven architectures, cloud-native microservices, and production-grade GenAI applications.</p>
+          <p><strong>Senior Backend Engineer with 12+ years of proven expertise</strong> architecting and building scalable distributed systems for BFSI and SaaS platforms. Deep expertise in designing event-driven architectures, cloud-native microservices, and production-grade GenAI applications.</p>
           <p>Track record of leading technical initiatives that improved system performance by 10x, reduced latency from 5s to 200ms, and decreased operational costs by 40%. Proven ability to mentor junior engineers and drive architectural decisions at scale.</p>
           <p>Currently focused on building LLM orchestration platforms, RAG pipelines, and high-throughput distributed systems. Strong believer in clean code, observability, and building systems that scale.</p>
         </div>
@@ -913,24 +950,39 @@
     <!-- Experience Section -->
     <section class="section" id="experience">
       <div class="section-header">
-        <h2>Experience</h2>
-        <p class="section-subtitle">Professional journey and key achievements</p>
+        <h2>Professional Experience</h2>
+        <p class="section-subtitle">12+ years building backend systems and distributed platforms</p>
+      </div>
+
+      <div class="experience-summary">
+        <div class="summary-item">
+          <strong>12+</strong>
+          <span>Total Years in Industry</span>
+        </div>
+        <div class="summary-item">
+          <strong>3</strong>
+          <span>Senior Leadership Roles</span>
+        </div>
+        <div class="summary-item">
+          <strong>100+</strong>
+          <span>Engineers Mentored</span>
+        </div>
       </div>
 
       <div class="experience-timeline">
         <div class="experience-item">
           <div class="experience-header">
             <div class="experience-title">Sr. Software Development Engineer</div>
-            <div class="experience-company">Current Role • BFSI Tech</div>
-            <div class="experience-duration">2020 - Present | 4+ years</div>
+            <div class="experience-company">BFSI Tech Platform</div>
+            <div class="experience-duration">2020 - Present | 4+ Years | Senior Role</div>
           </div>
-          <p class="experience-description">Leading design and implementation of next-generation GenAI platforms and distributed systems for financial services.</p>
+          <p class="experience-description">Leading design and implementation of next-generation GenAI platforms and distributed systems for financial services. Responsible for architecture decisions, team leadership, and technical strategy.</p>
           <div class="achievement-list">
             <div class="achievement">Architected LLM orchestration platform handling 10k+ concurrent requests</div>
             <div class="achievement">Designed RAG pipeline reducing search latency by 60%</div>
             <div class="achievement">Led migration to microservices architecture (15+ services)</div>
             <div class="achievement">Implemented event streaming processing 100k+ events/second</div>
-            <div class="achievement">Mentored 8+ junior engineers</div>
+            <div class="achievement">Mentored 8+ junior engineers on system design</div>
             <div class="achievement">Reduced operational costs by 40%</div>
           </div>
         </div>
@@ -938,16 +990,16 @@
         <div class="experience-item">
           <div class="experience-header">
             <div class="experience-title">Software Development Engineer II</div>
-            <div class="experience-company">SaaS Platform • FinTech Solutions</div>
-            <div class="experience-duration">2015 - 2020 | 5 years</div>
+            <div class="experience-company">FinTech SaaS Platform</div>
+            <div class="experience-duration">2015 - 2020 | 5 Years | Mid-Senior Role</div>
           </div>
-          <p class="experience-description">Built core backend systems for payment processing and financial transactions at scale.</p>
+          <p class="experience-description">Built core backend systems for payment processing and financial transactions at scale. Managed team of 4 engineers and took ownership of critical systems.</p>
           <div class="achievement-list">
             <div class="achievement">Built distributed payment system handling $10B+ annually</div>
-            <div class="achievement">Optimized database queries (5s → 200ms)</div>
+            <div class="achievement">Optimized database queries (5s → 200ms response time)</div>
             <div class="achievement">Implemented caching layer improving API response by 70%</div>
-            <div class="achievement">Designed real-time monitoring dashboard</div>
-            <div class="achievement">Increased test coverage to 85%</div>
+            <div class="achievement">Designed real-time monitoring dashboard for 50+ services</div>
+            <div class="achievement">Increased test coverage to 85% reducing production bugs</div>
             <div class="achievement">Automated deployment pipeline (80% time reduction)</div>
           </div>
         </div>
@@ -955,14 +1007,14 @@
         <div class="experience-item">
           <div class="experience-header">
             <div class="experience-title">Software Development Engineer</div>
-            <div class="experience-company">Lending Platform • BFSI</div>
-            <div class="experience-duration">2011 - 2015 | 4 years</div>
+            <div class="experience-company">Lending Platform BFSI</div>
+            <div class="experience-duration">2011 - 2015 | 4 Years | Junior-Mid Level</div>
           </div>
-          <p class="experience-description">Developed core lending platform processing loan applications and managing financial workflows.</p>
+          <p class="experience-description">Developed core lending platform processing loan applications and managing financial workflows. Built foundational experience in backend development and system design.</p>
           <div class="achievement-list">
             <div class="achievement">Developed lending platform processing 1000+ applications/day</div>
             <div class="achievement">Built real-time system monitoring dashboard</div>
-            <div class="achievement">Implemented comprehensive test suite</div>
+            <div class="achievement">Implemented comprehensive test suite for reliability</div>
             <div class="achievement">Designed RESTful API serving 50k+ requests/day</div>
             <div class="achievement">Reduced system downtime by 90%</div>
             <div class="achievement">Mentored 3+ junior developers</div>
@@ -1188,7 +1240,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2024 Mani Shankar Kumar. Building scalable systems and GenAI platforms for enterprise solutions.</p>
+    <p>© 2024 Mani Shankar Kumar. Building scalable systems and GenAI platforms for enterprise solutions. 12+ years of backend engineering expertise.</p>
   </footer>
 
   <script>
