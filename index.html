@@ -3,34 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mani Shankar Kumar - Sr. Software Engineer</title>
+  <title>Mani Shankar Kumar | Senior Software Engineer</title>
+  <meta name="description" content="Portfolio of Mani Shankar Kumar, Senior Software Engineer specializing in GenAI platforms, distributed systems, BFSI, SaaS, microservices, and cloud-native backend engineering." />
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --bg: #f6f8fc;
+      --surface: rgba(255, 255, 255, 0.82);
+      --surface-solid: #ffffff;
+      --text: #111827;
+      --muted: #5f6b7a;
+      --soft: #eef4ff;
+      --primary: #0a66c2;
+      --primary-dark: #064a91;
+      --accent: #6d5dfc;
+      --accent-2: #00a8e8;
+      --green: #10b981;
+      --border: rgba(17, 24, 39, 0.1);
+      --shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+      --shadow-soft: 0 14px 35px rgba(15, 23, 42, 0.08);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1120px;
     }
 
-    :root {
-      --primary: #0a66c2;
-      --primary-dark: #084298;
-      --primary-light: #e7f1ff;
-      --accent: #00a8e8;
-      --accent-2: #6366f1;
-      --success: #10b981;
-      --warning: #f59e0b;
-      --error: #ef4444;
-      --text-primary: #1f2937;
-      --text-secondary: #6b7280;
-      --text-tertiary: #9ca3af;
-      --bg-light: #f9fafb;
-      --bg-white: #ffffff;
-      --bg-dark: #111827;
-      --border: #e5e7eb;
-      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-      --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-      --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12);
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
@@ -38,1247 +39,937 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-      background: var(--bg-light);
-      color: var(--text-primary);
-      line-height: 1.6;
-      letter-spacing: -0.3px;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(10, 102, 194, 0.18), transparent 32%),
+        radial-gradient(circle at 86% 12%, rgba(109, 93, 252, 0.18), transparent 34%),
+        linear-gradient(180deg, #f9fbff 0%, var(--bg) 42%, #ffffff 100%);
+      line-height: 1.65;
+      letter-spacing: -0.02em;
     }
 
-    /* ============================================
-       NAVIGATION
-    ============================================ */
-    nav {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      padding: 1rem 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(17, 24, 39, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(17, 24, 39, 0.035) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black, transparent 70%);
     }
 
-    .nav-container {
-      max-width: 1400px;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 32px));
       margin: 0 auto;
-      padding: 0 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: var(--primary);
-      transition: all 0.3s ease;
-    }
-
-    .nav-brand:hover {
-      color: var(--primary-dark);
-      transform: translateX(2px);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 3rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: all 0.3s;
+      padding: 24px 0 60px;
       position: relative;
+      z-index: 1;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--primary);
-    }
-
-    .nav-links a.active::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--primary);
-      border-radius: 1px;
-    }
-
-    /* ============================================
-       HERO / DASHBOARD HEADER
-    ============================================ */
-    .dashboard-header {
-      padding: 4rem 2rem 3rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .header-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+    .topbar {
+      position: sticky;
+      top: 16px;
+      z-index: 20;
+      display: flex;
       align-items: center;
-    }
-
-    .header-left h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 0.75rem;
-      color: var(--text-primary);
-    }
-
-    .header-left .title {
-      font-size: 1.25rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-
-    .header-left p {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      margin-bottom: 2rem;
-      max-width: 500px;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .stat-item {
-      background: var(--bg-white);
-      padding: 1.25rem;
-      border-radius: 10px;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 14px;
+      margin-bottom: 52px;
       border: 1px solid var(--border);
-      transition: all 0.3s ease;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.74);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-soft);
     }
 
-    .stat-item:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .stat-number {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 0.25rem;
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .header-right {
+    .brand {
       display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 0.9rem 2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s;
-      border: none;
-      cursor: pointer;
-      font-size: 0.95rem;
-      display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 10px;
+      font-weight: 850;
+      color: var(--primary-dark);
+      padding-left: 6px;
       white-space: nowrap;
     }
 
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-      box-shadow: 0 4px 12px rgba(10, 102, 194, 0.25);
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 10px 24px rgba(10, 102, 194, 0.24);
+      font-size: 0.88rem;
     }
 
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(10, 102, 194, 0.35);
-    }
-
-    .btn-secondary {
-      background: var(--bg-white);
-      color: var(--primary);
-      border: 1.5px solid var(--primary);
-    }
-
-    .btn-secondary:hover {
-      background: var(--primary-light);
-      transform: translateY(-2px);
-    }
-
-    .social-links {
+    nav {
       display: flex;
-      gap: 1rem;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .social-link {
+    nav a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 750;
+      padding: 9px 12px;
+      border-radius: 999px;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary-dark);
+      background: var(--soft);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+      gap: 26px;
+      align-items: stretch;
+      margin-bottom: 26px;
+    }
+
+    .hero-main,
+    .hero-side,
+    section {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: clamp(32px, 6vw, 58px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      right: -110px;
+      top: -120px;
+      background: radial-gradient(circle, rgba(0, 168, 232, 0.22), transparent 68%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--primary-dark);
+      background: rgba(10, 102, 194, 0.08);
+      border: 1px solid rgba(10, 102, 194, 0.14);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.13);
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(2.45rem, 7vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+      margin-bottom: 18px;
+    }
+
+    .gradient {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.14rem);
+      margin-bottom: 28px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--bg-white);
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-weight: 600;
-      border: 1.5px solid var(--border);
-      transition: all 0.3s;
-    }
-
-    .social-link:hover {
-      color: var(--primary);
-      border-color: var(--primary);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-    }
-
-    /* ============================================
-       MAIN CONTAINER & SECTIONS
-    ============================================ */
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .section {
-      margin-bottom: 5rem;
-    }
-
-    .section-header {
-      margin-bottom: 3rem;
-    }
-
-    .section h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .section-subtitle {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      font-weight: 500;
-    }
-
-    /* ============================================
-       ABOUT SECTION
-    ============================================ */
-    .about-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .about-text p {
-      margin-bottom: 1.25rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      font-size: 1rem;
-    }
-
-    .highlights-box {
-      background: var(--bg-white);
-      padding: 2rem;
-      border-radius: 12px;
+      gap: 9px;
+      min-height: 48px;
+      padding: 12px 18px;
+      border-radius: 999px;
       border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
+      background: #fff;
+      color: var(--text);
+      font-weight: 850;
+      transition: 0.2s ease;
     }
 
-    .highlights-box h3 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 1.5rem;
+    .btn.primary {
+      color: #fff;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 16px 32px rgba(10, 102, 194, 0.24);
     }
 
-    .highlights-box ul {
-      list-style: none;
-    }
-
-    .highlights-box li {
-      display: flex;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-    }
-
-    .highlights-box li:before {
-      content: "→";
-      color: var(--primary);
-      font-weight: bold;
-      min-width: 20px;
-    }
-
-    /* ============================================
-       EXPERIENCE SECTION
-    ============================================ */
-    .experience-summary {
-      background: linear-gradient(135deg, var(--primary-light), rgba(0, 168, 232, 0.05));
-      padding: 2.5rem;
-      border-radius: 12px;
-      border-left: 4px solid var(--primary);
-      margin-bottom: 3rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-
-    .summary-item {
-      text-align: center;
-    }
-
-    .summary-item strong {
-      display: block;
-      font-size: 1.75rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .summary-item span {
-      display: block;
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      font-weight: 500;
-    }
-
-    .experience-timeline {
-      position: relative;
-      padding-left: 2rem;
-    }
-
-    .experience-item {
-      position: relative;
-      margin-bottom: 2.5rem;
-      background: var(--bg-white);
-      padding: 1.75rem;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      transition: all 0.3s;
-    }
-
-    .experience-item:hover {
-      border-color: var(--accent);
-      box-shadow: var(--shadow-md);
-    }
-
-    .experience-item::before {
-      content: '';
-      position: absolute;
-      left: -2.5rem;
-      top: 2rem;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--primary);
-      border: 3px solid var(--bg-white);
-      box-shadow: 0 0 0 1px var(--border);
-    }
-
-    .experience-item::after {
-      content: '';
-      position: absolute;
-      left: -2.1rem;
-      top: 2.75rem;
-      width: 1px;
-      height: calc(100% + 1.5rem);
-      background: var(--border);
-    }
-
-    .experience-item:last-child::after {
-      display: none;
-    }
-
-    .experience-header {
-      margin-bottom: 1rem;
-    }
-
-    .experience-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.25rem;
-    }
-
-    .experience-company {
-      font-size: 0.95rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .experience-duration {
-      font-size: 0.85rem;
-      color: var(--text-tertiary);
-      font-weight: 500;
-    }
-
-    .experience-description {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .achievement-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .achievement {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .achievement:before {
-      content: "✓";
-      color: var(--success);
-      font-weight: bold;
-      min-width: 16px;
-    }
-
-    /* ============================================
-       SKILLS SECTION
-    ============================================ */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.75rem;
-    }
-
-    .skill-category {
-      background: var(--bg-white);
-      padding: 2rem;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      transition: all 0.3s;
-    }
-
-    .skill-category:hover {
-      border-color: var(--primary);
-      box-shadow: var(--shadow-md);
+    .btn:hover {
       transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
     }
 
-    .skill-category-title {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .skill-icon {
-      font-size: 1.5rem;
-    }
-
-    .skill-category h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin: 0;
-    }
-
-    .skill-list {
+    .hero-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 9px;
     }
 
-    .skill-tag {
-      display: inline-block;
-      background: var(--primary-light);
-      color: var(--primary);
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      transition: all 0.3s;
-      border: 1px solid rgba(10, 102, 194, 0.2);
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 11px;
+      border-radius: 999px;
+      color: var(--primary-dark);
+      background: rgba(10, 102, 194, 0.08);
+      border: 1px solid rgba(10, 102, 194, 0.13);
+      font-size: 0.86rem;
+      font-weight: 800;
     }
 
-    .skill-tag:hover {
-      background: var(--primary);
-      color: white;
-      border-color: var(--primary);
-      transform: translateY(-2px);
+    .hero-side {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
     }
 
-    /* ============================================
-       PROJECTS SECTION
-    ============================================ */
-    .projects-grid {
+    .profile-card {
+      min-height: 180px;
+      border-radius: 24px;
+      padding: 24px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.26), transparent 28%),
+        linear-gradient(145deg, #0a66c2, #6d5dfc);
+      box-shadow: 0 20px 40px rgba(10, 102, 194, 0.22);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-card::after {
+      content: "MSK";
+      position: absolute;
+      right: 18px;
+      bottom: -18px;
+      font-size: 4.8rem;
+      font-weight: 950;
+      opacity: 0.12;
+      letter-spacing: -0.1em;
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 22px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-size: 1.35rem;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .profile-card h2 {
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+    }
+
+    .profile-card p {
+      color: rgba(255, 255, 255, 0.82);
+      font-weight: 650;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .metric {
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.72);
+      padding: 18px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.8rem;
+      line-height: 1;
+      color: var(--primary);
+      margin-bottom: 5px;
+      letter-spacing: -0.04em;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 26px;
+      margin-bottom: 26px;
+    }
+
+    section {
+      padding: clamp(24px, 4vw, 34px);
+      margin-bottom: 26px;
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+    }
+
+    .section-title span {
+      display: block;
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.55rem, 3vw, 2.05rem);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      gap: 14px;
+    }
+
+    .cards.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.76);
+      transition: 0.22s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-soft);
+      border-color: rgba(10, 102, 194, 0.22);
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 7px;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .skill {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--border);
+      color: #233043;
+      font-size: 0.86rem;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 14px;
+    }
+
+    .job {
+      position: relative;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .job h3 {
+      font-size: 1.05rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 3px;
+    }
+
+    .date {
+      white-space: nowrap;
+      color: var(--primary-dark);
+      background: rgba(10, 102, 194, 0.08);
+      border: 1px solid rgba(10, 102, 194, 0.12);
+      border-radius: 999px;
+      padding: 6px 10px;
+      height: fit-content;
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      color: var(--muted);
+      margin-bottom: 7px;
+      font-size: 0.96rem;
     }
 
     .project-card {
-      background: var(--bg-white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: all 0.3s;
       display: flex;
       flex-direction: column;
-      box-shadow: var(--shadow-sm);
+      min-height: 238px;
     }
 
-    .project-card:hover {
-      border-color: var(--accent);
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-4px);
-    }
-
-    .project-header {
-      padding: 2rem;
-      background: linear-gradient(135deg, rgba(10, 102, 194, 0.05), rgba(0, 168, 232, 0.05));
-      border-bottom: 1px solid var(--border);
-    }
-
-    .project-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .project-subtitle {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-    }
-
-    .project-body {
-      padding: 1.75rem;
-      flex-grow: 1;
+    .project-top {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 12px;
     }
 
-    .project-description {
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
+    .project-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: var(--soft);
+      font-size: 1.25rem;
     }
 
-    .project-stats {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      font-size: 0.9rem;
+    .project-card .skills {
+      margin-top: 16px;
     }
 
-    .project-stat {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--text-secondary);
-    }
-
-    .project-stat strong {
-      color: var(--primary);
-    }
-
-    .project-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .repo-link {
       margin-top: auto;
-    }
-
-    .tech-badge {
-      display: inline-block;
-      background: rgba(0, 168, 232, 0.1);
-      color: var(--accent);
-      padding: 0.35rem 0.75rem;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+      padding-top: 18px;
       color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 1.5rem;
-      transition: all 0.3s;
+      font-weight: 900;
     }
 
-    .project-link:hover {
-      gap: 1rem;
-      color: var(--primary-dark);
-    }
-
-    /* ============================================
-       CONTACT SECTION
-    ============================================ */
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.75rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
     }
 
-    .contact-card {
-      background: var(--bg-white);
-      padding: 2rem;
-      border-radius: 10px;
-      border: 1px solid var(--border);
+    .contact {
       text-align: center;
-      transition: all 0.3s;
-      box-shadow: var(--shadow-sm);
     }
 
-    .contact-card:hover {
-      border-color: var(--primary);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-3px);
+    .contact .icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
     }
 
-    .contact-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact-card h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.75rem;
-    }
-
-    .contact-card a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s;
-      word-break: break-word;
-    }
-
-    .contact-card a:hover {
-      color: var(--primary-dark);
-      text-decoration: underline;
-    }
-
-    /* ============================================
-       FOOTER
-    ============================================ */
     footer {
-      background: var(--bg-white);
-      border-top: 1px solid var(--border);
-      padding: 3rem 2rem;
-      margin-top: 5rem;
       text-align: center;
+      color: var(--muted);
+      padding: 22px 0 0;
+      font-size: 0.92rem;
     }
 
-    footer p {
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-    }
-
-    /* ============================================
-       RESPONSIVE
-    ============================================ */
-    @media (max-width: 1024px) {
-      .header-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .about-container {
-        grid-template-columns: 1fr;
-      }
-
-      .achievement-list {
-        grid-template-columns: 1fr;
-      }
-
-      .experience-summary {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 0 1.5rem;
-      }
-
-      .nav-container {
-        padding: 0 1.5rem;
-      }
-
-      .nav-links {
-        gap: 1.5rem;
-      }
-
-      .dashboard-header {
-        padding: 2.5rem 1.5rem;
-      }
-
-      .header-left h1 {
-        font-size: 2rem;
-      }
-
-      .section h2 {
-        font-size: 1.6rem;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-buttons {
+    @media (max-width: 900px) {
+      .topbar {
+        align-items: flex-start;
+        border-radius: 24px;
         flex-direction: column;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+
+      .hero,
+      .section-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid,
+      .cards.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        width: min(100% - 22px, var(--max));
+        padding-top: 12px;
+      }
+
+      .topbar {
+        position: static;
+        margin-bottom: 24px;
+      }
+
+      nav a {
+        padding: 8px 10px;
+      }
+
+      .hero-main,
+      .hero-side,
+      section {
+        border-radius: 24px;
+      }
+
+      .actions,
+      .actions .btn {
+        width: 100%;
       }
 
       .btn {
         width: 100%;
-        justify-content: center;
       }
 
-      .experience-timeline {
-        padding-left: 1rem;
-      }
-
-      .experience-item::before {
-        left: -1.75rem;
-      }
-
-      .experience-item::after {
-        left: -1.4rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .header-left h1 {
-        font-size: 1.75rem;
-      }
-
-      .header-left .title {
-        font-size: 1rem;
-      }
-
-      .section h2 {
-        font-size: 1.4rem;
-      }
-
-      .nav-links {
-        gap: 1rem;
-        font-size: 0.85rem;
-      }
-
-      .social-links {
-        width: 100%;
-      }
-
-      .social-link {
-        width: 44px;
-        height: 44px;
-      }
-
-      .skill-list {
-        gap: 0.5rem;
-      }
-
-      .skill-tag {
-        font-size: 0.75rem;
-        padding: 0.35rem 0.7rem;
-      }
-
-      .experience-summary {
+      .contact-grid,
+      .cards.two {
         grid-template-columns: 1fr;
+      }
+
+      .job-head {
+        display: block;
+      }
+
+      .date {
+        display: inline-block;
+        margin-top: 8px;
+        white-space: normal;
       }
     }
   </style>
 </head>
+
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="nav-brand">
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-          <circle cx="16" cy="16" r="3" fill="currentColor" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="16" cy="6" r="2.5" fill="currentColor" stroke="currentColor" stroke-width="1" opacity="0.7"/>
-          <circle cx="6" cy="24" r="2.5" fill="currentColor" stroke="currentColor" stroke-width="1" opacity="0.7"/>
-          <circle cx="26" cy="24" r="2.5" fill="currentColor" stroke="currentColor" stroke-width="1" opacity="0.7"/>
-          <circle cx="26" cy="10" r="2.5" fill="currentColor" stroke="currentColor" stroke-width="1" opacity="0.7"/>
-          <line x1="16" y1="16" x2="16" y2="6" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-          <line x1="16" y1="16" x2="6" y2="24" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-          <line x1="16" y1="16" x2="26" y2="24" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-          <line x1="16" y1="16" x2="26" y2="10" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-        </svg>
-        MSK
+  <div class="page">
+    <div class="topbar">
+      <a href="#" class="brand" aria-label="Mani Shankar Kumar home">
+        <span class="brand-mark">MSK</span>
+        <span>Mani Shankar Kumar</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#about" class="nav-link active">About</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </nav>
 
-  <!-- Dashboard Header -->
-  <section class="dashboard-header">
-    <div class="header-content">
-      <div class="header-left">
-        <h1>Mani Shankar Kumar</h1>
-        <div class="title">Sr. Software Development Engineer</div>
-        <p>Building high-performance distributed systems and GenAI platforms for Fortune 500 companies. Specializing in backend architecture, microservices, and cloud-native solutions.</p>
-        
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-number">12+</div>
-            <div class="stat-label">Years Experience</div>
+    <main>
+      <section class="hero" aria-label="Profile overview">
+        <div class="hero-main">
+          <div class="eyebrow"><span class="status-dot"></span> Senior Software Engineer · Noida, India</div>
+          <h1>Building <span class="gradient">GenAI platforms</span> and distributed backend systems.</h1>
+          <p class="hero-copy">
+            I am a Senior Software Engineer with 11+ years of experience across BFSI and SaaS, focused on production-grade
+            distributed systems, microservices, data pipelines, LLM orchestration, and RAG-based enterprise automation.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="mailto:manishankarkumar131@gmail.com">Contact Me</a>
+            <a class="btn" href="https://github.com/msk131" target="_blank" rel="noreferrer">View GitHub</a>
+            <a class="btn" href="https://linkedin.com/in/mrmanishankar" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
-          <div class="stat-item">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Projects Shipped</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">10M+</div>
-            <div class="stat-label">Events/Second</div>
+
+          <div class="hero-tags">
+            <span class="pill">Java</span>
+            <span class="pill">Spring Boot</span>
+            <span class="pill">Python</span>
+            <span class="pill">LangChain</span>
+            <span class="pill">Azure OpenAI</span>
+            <span class="pill">Kafka</span>
+            <span class="pill">AWS</span>
+            <span class="pill">Kubernetes</span>
           </div>
         </div>
+
+        <aside class="hero-side" aria-label="Profile highlights">
+          <div class="profile-card">
+            <div class="avatar">MSK</div>
+            <h2>Senior Software Engineer</h2>
+            <p>GenAI Platform · Distributed Systems · BFSI · SaaS</p>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <strong>11+</strong>
+              <span>Years of Engineering Experience</span>
+            </div>
+            <div class="metric">
+              <strong>RAG</strong>
+              <span>LLM Orchestration & Enterprise Automation</span>
+            </div>
+            <div class="metric">
+              <strong>BFSI</strong>
+              <span>Financial Platforms & Data Workflows</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <div class="section-grid">
+        <section id="about">
+          <div class="section-title">
+            <span>About</span>
+            <h2>Backend engineer with current focus on GenAI systems.</h2>
+          </div>
+          <p class="muted">
+            My work spans backend architecture, event-driven systems, cloud-native microservices, financial data pipelines,
+            and production GenAI applications. Recently, I have worked on RAG workflows, onboarding automation, LLM-based extraction,
+            Azure OpenAI, Azure AI Search, Azure Document Intelligence, LangChain, and LangGraph.
+          </p>
+        </section>
+
+        <section>
+          <div class="section-title">
+            <span>Focus Areas</span>
+            <h2>What I bring to engineering teams.</h2>
+          </div>
+          <div class="cards two">
+            <div class="card">
+              <h3>Production GenAI</h3>
+              <p>LLM orchestration, RAG architecture, retrieval tuning, hallucination mitigation, and enterprise workflow automation.</p>
+            </div>
+            <div class="card">
+              <h3>Backend Architecture</h3>
+              <p>Java, Spring Boot, microservices, API design, high-concurrency systems, and event-driven architecture.</p>
+            </div>
+            <div class="card">
+              <h3>Financial Systems</h3>
+              <p>BFSI workflows, reconciliation systems, compliance reporting, financial transactions, and data platforms.</p>
+            </div>
+            <div class="card">
+              <h3>Cloud Delivery</h3>
+              <p>AWS, Azure, Docker, Kubernetes, Terraform, CI/CD, observability, and scalable production operations.</p>
+            </div>
+          </div>
+        </section>
       </div>
 
-      <div class="header-right">
-        <div class="cta-buttons">
-          <a href="mailto:manishankarkumar131@gmail.com" class="btn btn-primary">📧 Get in Touch</a>
-          <a href="https://github.com/msk131" class="btn btn-secondary" target="_blank">🐙 GitHub</a>
+      <section id="skills">
+        <div class="section-title">
+          <span>Skills</span>
+          <h2>Modern backend, GenAI, cloud, and data stack.</h2>
         </div>
 
-        <div class="social-links">
-          <a href="https://linkedin.com/in/mrmanishankar" class="social-link" title="LinkedIn" target="_blank">in</a>
-          <a href="https://github.com/msk131" class="social-link" title="GitHub" target="_blank">gh</a>
-          <a href="mailto:manishankarkumar131@gmail.com" class="social-link" title="Email">@</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="container">
-    <!-- About Section -->
-    <section class="section" id="about">
-      <div class="section-header">
-        <h2>About</h2>
-        <p class="section-subtitle">Professional overview and core competencies</p>
-      </div>
-
-      <div class="about-container">
-        <div class="about-text">
-          <p><strong>Senior Backend Engineer with 12+ years of proven expertise</strong> architecting and building scalable distributed systems for BFSI and SaaS platforms. Deep expertise in designing event-driven architectures, cloud-native microservices, and production-grade GenAI applications.</p>
-          <p>Track record of leading technical initiatives that improved system performance by 10x, reduced latency from 5s to 200ms, and decreased operational costs by 40%. Proven ability to mentor junior engineers and drive architectural decisions at scale.</p>
-          <p>Currently focused on building LLM orchestration platforms, RAG pipelines, and high-throughput distributed systems. Strong believer in clean code, observability, and building systems that scale.</p>
-        </div>
-
-        <div class="highlights-box">
-          <h3>Core Expertise</h3>
-          <ul>
-            <li>Distributed Systems & Microservices</li>
-            <li>Event-Driven Architectures</li>
-            <li>GenAI & LLM Orchestration</li>
-            <li>High-Performance Backend Systems</li>
-            <li>Cloud Infrastructure (AWS, Azure)</li>
-            <li>System Design & Optimization</li>
-            <li>Kubernetes & Container Orchestration</li>
-            <li>Database Design & Optimization</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-      <div class="section-header">
-        <h2>Professional Experience</h2>
-        <p class="section-subtitle">12+ years building backend systems and distributed platforms</p>
-      </div>
-
-      <div class="experience-summary">
-        <div class="summary-item">
-          <strong>12+</strong>
-          <span>Total Years in Industry</span>
-        </div>
-        <div class="summary-item">
-          <strong>3</strong>
-          <span>Senior Leadership Roles</span>
-        </div>
-        <div class="summary-item">
-          <strong>100+</strong>
-          <span>Engineers Mentored</span>
-        </div>
-      </div>
-
-      <div class="experience-timeline">
-        <div class="experience-item">
-          <div class="experience-header">
-            <div class="experience-title">Sr. Software Development Engineer</div>
-            <div class="experience-company">BFSI Tech Platform</div>
-            <div class="experience-duration">2020 - Present | 4+ Years | Senior Role</div>
+        <div class="cards two">
+          <div class="card">
+            <h3>Languages & Backend</h3>
+            <div class="skills">
+              <span class="skill">Java</span>
+              <span class="skill">Python</span>
+              <span class="skill">Kotlin</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">TypeScript</span>
+              <span class="skill">Spring Boot</span>
+              <span class="skill">Quarkus</span>
+              <span class="skill">Hibernate</span>
+              <span class="skill">REST APIs</span>
+            </div>
           </div>
-          <p class="experience-description">Leading design and implementation of next-generation GenAI platforms and distributed systems for financial services. Responsible for architecture decisions, team leadership, and technical strategy.</p>
-          <div class="achievement-list">
-            <div class="achievement">Architected LLM orchestration platform handling 10k+ concurrent requests</div>
-            <div class="achievement">Designed RAG pipeline reducing search latency by 60%</div>
-            <div class="achievement">Led migration to microservices architecture (15+ services)</div>
-            <div class="achievement">Implemented event streaming processing 100k+ events/second</div>
-            <div class="achievement">Mentored 8+ junior engineers on system design</div>
-            <div class="achievement">Reduced operational costs by 40%</div>
-          </div>
-        </div>
 
-        <div class="experience-item">
-          <div class="experience-header">
-            <div class="experience-title">Software Development Engineer II</div>
-            <div class="experience-company">FinTech SaaS Platform</div>
-            <div class="experience-duration">2015 - 2020 | 5 Years | Mid-Senior Role</div>
+          <div class="card">
+            <h3>GenAI & ML</h3>
+            <div class="skills">
+              <span class="skill">RAG Architecture</span>
+              <span class="skill">LLM Orchestration</span>
+              <span class="skill">Prompt Engineering</span>
+              <span class="skill">Model Evaluation</span>
+              <span class="skill">Embeddings</span>
+              <span class="skill">Vector Search</span>
+              <span class="skill">LangChain</span>
+              <span class="skill">LangGraph</span>
+              <span class="skill">Azure OpenAI</span>
+              <span class="skill">Azure AI Search</span>
+            </div>
           </div>
-          <p class="experience-description">Built core backend systems for payment processing and financial transactions at scale. Managed team of 4 engineers and took ownership of critical systems.</p>
-          <div class="achievement-list">
-            <div class="achievement">Built distributed payment system handling $10B+ annually</div>
-            <div class="achievement">Optimized database queries (5s → 200ms response time)</div>
-            <div class="achievement">Implemented caching layer improving API response by 70%</div>
-            <div class="achievement">Designed real-time monitoring dashboard for 50+ services</div>
-            <div class="achievement">Increased test coverage to 85% reducing production bugs</div>
-            <div class="achievement">Automated deployment pipeline (80% time reduction)</div>
-          </div>
-        </div>
 
-        <div class="experience-item">
-          <div class="experience-header">
-            <div class="experience-title">Software Development Engineer</div>
-            <div class="experience-company">Lending Platform BFSI</div>
-            <div class="experience-duration">2011 - 2015 | 4 Years | Junior-Mid Level</div>
-          </div>
-          <p class="experience-description">Developed core lending platform processing loan applications and managing financial workflows. Built foundational experience in backend development and system design.</p>
-          <div class="achievement-list">
-            <div class="achievement">Developed lending platform processing 1000+ applications/day</div>
-            <div class="achievement">Built real-time system monitoring dashboard</div>
-            <div class="achievement">Implemented comprehensive test suite for reliability</div>
-            <div class="achievement">Designed RESTful API serving 50k+ requests/day</div>
-            <div class="achievement">Reduced system downtime by 90%</div>
-            <div class="achievement">Mentored 3+ junior developers</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-      <div class="section-header">
-        <h2>Skills & Technologies</h2>
-        <p class="section-subtitle">Technical expertise across multiple domains</p>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-category">
-          <div class="skill-category-title">
-            <span class="skill-icon">🖥️</span>
-            <h3>Languages</h3>
-          </div>
-          <div class="skill-list">
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Go</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">SQL</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-category-title">
-            <span class="skill-icon">🏗️</span>
-            <h3>Frameworks & Platforms</h3>
-          </div>
-          <div class="skill-list">
-            <span class="skill-tag">Spring Boot</span>
-            <span class="skill-tag">FastAPI</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express</span>
-            <span class="skill-tag">Flask</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-category-title">
-            <span class="skill-icon">☁️</span>
+          <div class="card">
             <h3>Cloud & DevOps</h3>
-          </div>
-          <div class="skill-list">
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">Azure</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Kubernetes</span>
-            <span class="skill-tag">CI/CD</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-category-title">
-            <span class="skill-icon">🔄</span>
-            <h3>Message & Event Streaming</h3>
-          </div>
-          <div class="skill-list">
-            <span class="skill-tag">Apache Kafka</span>
-            <span class="skill-tag">RabbitMQ</span>
-            <span class="skill-tag">Redis</span>
-            <span class="skill-tag">AWS SQS</span>
-            <span class="skill-tag">Event Sourcing</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-category-title">
-            <span class="skill-icon">🗄️</span>
-            <h3>Databases</h3>
-          </div>
-          <div class="skill-list">
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">Cassandra</span>
-            <span class="skill-tag">DynamoDB</span>
-            <span class="skill-tag">Redis</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-category-title">
-            <span class="skill-icon">🤖</span>
-            <h3>GenAI Stack</h3>
-          </div>
-          <div class="skill-list">
-            <span class="skill-tag">LLM Orchestration</span>
-            <span class="skill-tag">RAG Pipelines</span>
-            <span class="skill-tag">Vector DB</span>
-            <span class="skill-tag">Prompt Engineering</span>
-            <span class="skill-tag">OpenAI API</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-      <div class="section-header">
-        <h2>Featured Projects</h2>
-        <p class="section-subtitle">Key projects demonstrating technical expertise</p>
-      </div>
-
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-title">📧 Email Context Service</div>
-            <div class="project-subtitle">GenAI Backend Platform</div>
-          </div>
-          <div class="project-body">
-            <p class="project-description">Production GenAI backend enabling CPA firms to capture, summarize, and perform semantic search across email conversations using LLM capabilities.</p>
-            <div class="project-stats">
-              <div class="project-stat">📊 <strong>10k+</strong> conversations/day</div>
-              <div class="project-stat">⚡ <strong>200ms</strong> avg response</div>
+            <div class="skills">
+              <span class="skill">AWS Lambda</span>
+              <span class="skill">AWS S3</span>
+              <span class="skill">DynamoDB</span>
+              <span class="skill">SNS</span>
+              <span class="skill">SQS</span>
+              <span class="skill">Azure</span>
+              <span class="skill">Docker</span>
+              <span class="skill">Kubernetes</span>
+              <span class="skill">Terraform</span>
+              <span class="skill">CI/CD</span>
             </div>
-            <div class="project-tech">
-              <span class="tech-badge">FastAPI</span>
-              <span class="tech-badge">OpenAI</span>
-              <span class="tech-badge">PostgreSQL</span>
-              <span class="tech-badge">Docker</span>
-            </div>
-            <a href="https://github.com/msk131/email-context-service" class="project-link" target="_blank">View Repository →</a>
           </div>
+
+          <div class="card">
+            <h3>Data, Streaming & Observability</h3>
+            <div class="skills">
+              <span class="skill">Apache Kafka</span>
+              <span class="skill">Apache Spark</span>
+              <span class="skill">ETL Pipelines</span>
+              <span class="skill">PostgreSQL</span>
+              <span class="skill">MySQL</span>
+              <span class="skill">MongoDB</span>
+              <span class="skill">Oracle</span>
+              <span class="skill">OpenSearch</span>
+              <span class="skill">CloudWatch</span>
+              <span class="skill">Dynatrace</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="section-title">
+          <span>Experience</span>
+          <h2>11+ years across GenAI, BFSI, SaaS, and backend platforms.</h2>
         </div>
 
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-title">🔗 Distributed Mesh</div>
-            <div class="project-subtitle">Microservice Architecture</div>
-          </div>
-          <div class="project-body">
-            <p class="project-description">Enterprise-grade microservice mesh with service discovery, load balancing, and fault tolerance patterns for distributed systems.</p>
-            <div class="project-stats">
-              <div class="project-stat">📊 <strong>50k+</strong> concurrent requests</div>
-              <div class="project-stat">⚡ <strong>99.95%</strong> uptime</div>
+        <div class="timeline">
+          <article class="job">
+            <div class="job-head">
+              <div>
+                <h3>Sr. Software Development Engineer - GenAI & Fullstack</h3>
+                <p class="muted">Clearwater Analytics · Noida, India</p>
+              </div>
+              <span class="date">Jan 2023 - Present</span>
             </div>
-            <div class="project-tech">
-              <span class="tech-badge">Eureka</span>
-              <span class="tech-badge">Zuul</span>
-              <span class="tech-badge">Hystrix</span>
-              <span class="tech-badge">Java</span>
+            <ul>
+              <li>Delivered production-grade GenAI and data platform initiatives for financial workflows.</li>
+              <li>Built RAG and LLM-based systems using LangChain, Azure OpenAI, Azure AI Search, and Azure Document Intelligence.</li>
+              <li>Worked on event-driven ingestion, onboarding automation, fund matching, and high-concurrency backend services.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <div>
+                <h3>Senior Professional I</h3>
+                <p class="muted">Capgemini · Gurgaon, India</p>
+              </div>
+              <span class="date">Jan 2021 - Oct 2022</span>
             </div>
-            <a href="https://github.com/msk131/EurekaServer" class="project-link" target="_blank">View Repository →</a>
-          </div>
+            <ul>
+              <li>Built Spring Boot microservices and scalable APIs across backend services.</li>
+              <li>Implemented Kafka-based async messaging, API gateway, identity management, and CI/CD improvements.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <div>
+                <h3>Specialist SE - Fullstack</h3>
+                <p class="muted">Societe Generale · Bangalore, India</p>
+              </div>
+              <span class="date">Jan 2018 - Jan 2021</span>
+            </div>
+            <ul>
+              <li>Developed Java Spring REST APIs for banking and compliance workflows.</li>
+              <li>Optimized trade data compliance reporting pipelines and contributed to microservices transition.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <div>
+                <h3>Systems Engineer - Fullstack</h3>
+                <p class="muted">Tata Consultancy Services · Gurgaon, India</p>
+              </div>
+              <span class="date">Nov 2014 - Jan 2018</span>
+            </div>
+            <ul>
+              <li>Developed REST APIs, banking portal modules, and event-driven workflows using Java, Spring Boot, Hibernate, Kafka, and Angular.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-title">
+          <span>GitHub Projects</span>
+          <h2>Selected repositories aligned with my engineering profile.</h2>
         </div>
 
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-title">⚡ Event Streaming</div>
-            <div class="project-subtitle">Real-Time Data Pipeline</div>
-          </div>
-          <div class="project-body">
-            <p class="project-description">High-throughput, low-latency event processing platform handling millions of events per second in real-time.</p>
-            <div class="project-stats">
-              <div class="project-stat">📊 <strong>1M+</strong> events/second</div>
-              <div class="project-stat">⚡ <strong>99.9%</strong> guarantee</div>
+        <div class="cards two">
+          <article class="card project-card">
+            <div class="project-top">
+              <div>
+                <h3>Email Context Service</h3>
+                <p>GenAI backend service for email context capture, summarization, and semantic search.</p>
+              </div>
+              <div class="project-icon">📧</div>
             </div>
-            <div class="project-tech">
-              <span class="tech-badge">Kafka</span>
-              <span class="tech-badge">Spring Boot</span>
-              <span class="tech-badge">Redis</span>
-              <span class="tech-badge">Kubernetes</span>
+            <div class="skills">
+              <span class="skill">FastAPI</span>
+              <span class="skill">OpenAI</span>
+              <span class="skill">PostgreSQL</span>
+              <span class="skill">Docker</span>
             </div>
-            <a href="https://github.com/msk131/spring-boot-apache-kafka" class="project-link" target="_blank">View Repository →</a>
-          </div>
+            <a class="repo-link" href="https://github.com/msk131/email-context-service" target="_blank" rel="noreferrer">View repository →</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <div>
+                <h3>Spring Boot Apache Kafka</h3>
+                <p>Kafka-based event streaming project using Spring Boot.</p>
+              </div>
+              <div class="project-icon">⚡</div>
+            </div>
+            <div class="skills">
+              <span class="skill">Java</span>
+              <span class="skill">Spring Boot</span>
+              <span class="skill">Kafka</span>
+            </div>
+            <a class="repo-link" href="https://github.com/msk131/spring-boot-apache-kafka" target="_blank" rel="noreferrer">View repository →</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <div>
+                <h3>Eureka Server</h3>
+                <p>Service discovery setup for microservice-based architecture.</p>
+              </div>
+              <div class="project-icon">🔗</div>
+            </div>
+            <div class="skills">
+              <span class="skill">Java</span>
+              <span class="skill">Spring Cloud</span>
+              <span class="skill">Microservices</span>
+            </div>
+            <a class="repo-link" href="https://github.com/msk131/EurekaServer" target="_blank" rel="noreferrer">View repository →</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <div>
+                <h3>Nginx Consul Template</h3>
+                <p>Dynamic configuration and infrastructure-related project.</p>
+              </div>
+              <div class="project-icon">☁️</div>
+            </div>
+            <div class="skills">
+              <span class="skill">Nginx</span>
+              <span class="skill">Consul</span>
+              <span class="skill">DevOps</span>
+            </div>
+            <a class="repo-link" href="https://github.com/msk131/nginx-consul-template" target="_blank" rel="noreferrer">View repository →</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-title">
+          <span>Contact</span>
+          <h2>Let’s connect.</h2>
         </div>
 
-        <div class="project-card">
-          <div class="project-header">
-            <div class="project-title">☁️ Cloud Infrastructure</div>
-            <div class="project-subtitle">Dynamic Configuration Management</div>
-          </div>
-          <div class="project-body">
-            <p class="project-description">Intelligent cloud infrastructure with dynamic configuration management and auto-scaling on Kubernetes.</p>
-            <div class="project-stats">
-              <div class="project-stat">🚀 <strong>0</strong> downtime deployments</div>
-              <div class="project-stat">⚡ <strong>10x</strong> faster scaling</div>
-            </div>
-            <div class="project-tech">
-              <span class="tech-badge">Consul</span>
-              <span class="tech-badge">Nginx</span>
-              <span class="tech-badge">Kubernetes</span>
-              <span class="tech-badge">Docker</span>
-            </div>
-            <a href="https://github.com/msk131/nginx-consul-template" class="project-link" target="_blank">View Repository →</a>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="contact-grid">
+          <a class="card contact" href="mailto:manishankarkumar131@gmail.com">
+            <div class="icon">📧</div>
+            <h3>Email</h3>
+            <p>manishankarkumar131@gmail.com</p>
+          </a>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-      <div class="section-header">
-        <h2>Get in Touch</h2>
-        <p class="section-subtitle">Let's connect and discuss opportunities</p>
-      </div>
+          <a class="card contact" href="https://linkedin.com/in/mrmanishankar" target="_blank" rel="noreferrer">
+            <div class="icon">💼</div>
+            <h3>LinkedIn</h3>
+            <p>linkedin.com/in/mrmanishankar</p>
+          </a>
 
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="contact-icon">📧</div>
-          <h3>Email</h3>
-          <a href="mailto:manishankarkumar131@gmail.com">manishankarkumar131@gmail.com</a>
+          <a class="card contact" href="https://github.com/msk131" target="_blank" rel="noreferrer">
+            <div class="icon">🐙</div>
+            <h3>GitHub</h3>
+            <p>github.com/msk131</p>
+          </a>
+
+          <div class="card contact">
+            <div class="icon">📍</div>
+            <h3>Location</h3>
+            <p>Noida, India</p>
+          </div>
         </div>
-        <div class="contact-card">
-          <div class="contact-icon">💼</div>
-          <h3>LinkedIn</h3>
-          <a href="https://linkedin.com/in/mrmanishankar" target="_blank">linkedin.com/in/mrmanishankar</a>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">🐙</div>
-          <h3>GitHub</h3>
-          <a href="https://github.com/msk131" target="_blank">github.com/msk131</a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Mani Shankar Kumar · Senior Software Engineer · GenAI Platforms · Distributed Systems
+    </footer>
   </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2024 Mani Shankar Kumar. Building scalable systems and GenAI platforms for enterprise solutions. 12+ years of backend engineering expertise.</p>
-  </footer>
-
-  <script>
-    // Navigation active state
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('.section');
-
-    function updateActiveNav() {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 200;
-        if (window.pageYOffset >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-          link.classList.add('active');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', updateActiveNav);
-
-    // Smooth scroll on nav click
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-          setTimeout(updateActiveNav, 300);
-        }
-      });
-    });
-  </script>
 </body>
 </html>
