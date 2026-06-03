@@ -12,16 +12,19 @@
     }
 
     :root {
-      --primary-color: #0a66c2;
+      --primary: #0a66c2;
       --primary-dark: #084298;
-      --secondary-color: #181717;
-      --accent-color: #00a8e8;
-      --light-bg: #f5f5f5;
-      --text-primary: #1f1f1f;
-      --text-secondary: #555;
-      --border-color: #e0e0e0;
-      --success-color: #10b981;
-      --warning-color: #f59e0b;
+      --primary-light: #e7f1ff;
+      --accent: #00a8e8;
+      --success: #10b981;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --bg-light: #f9fafb;
+      --bg-white: #ffffff;
+      --border: #e5e7eb;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+      --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
 
     html {
@@ -29,27 +32,27 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: var(--bg-light);
       color: var(--text-primary);
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     /* Navigation */
     nav {
-      position: fixed;
+      position: sticky;
       top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(10px);
-      padding: 12px 20px;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -57,656 +60,473 @@
 
     .nav-brand {
       font-weight: 700;
-      color: var(--primary-color);
-      font-size: 1rem;
+      font-size: 1.1rem;
+      color: var(--primary);
       text-decoration: none;
     }
 
     .nav-links {
       display: flex;
-      gap: 8px;
+      gap: 2rem;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--text-secondary);
       text-decoration: none;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-weight: 500;
-      padding: 6px 10px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
+      transition: color 0.2s;
     }
 
-    .nav-links a:hover,
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
     .nav-links a.active {
-      background: var(--light-bg);
-      color: var(--primary-color);
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.25rem;
     }
 
+    /* Main container */
     .container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 15px;
-      margin-top: 60px;
+      padding: 0 1.5rem;
     }
 
-    /* Header Section */
+    /* Hero Section */
     header {
-      background: white;
-      border-radius: 12px;
-      padding: 35px 30px;
+      padding: 4rem 0;
       text-align: center;
-      margin-bottom: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      animation: slideDown 0.6s ease-out;
-    }
-
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
       color: var(--text-primary);
-      font-weight: 700;
     }
 
     .tagline {
-      font-size: 1rem;
-      color: var(--primary-color);
-      font-weight: 600;
-      margin-bottom: 15px;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-weight: 500;
     }
 
     .badges {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 8px;
-      margin-bottom: 15px;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
 
     .badge {
       display: inline-block;
-      background: linear-gradient(135deg, var(--light-bg), white);
-      padding: 6px 12px;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 0.5rem 1rem;
       border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      border: 2px solid var(--border-color);
-      transition: all 0.3s ease;
+      font-size: 0.85rem;
+      font-weight: 600;
     }
 
-    .badge:hover {
-      border-color: var(--primary-color);
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(10, 102, 194, 0.2);
+      box-shadow: var(--shadow-md);
     }
 
+    .btn-secondary {
+      background: var(--bg-light);
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary-light);
+    }
+
+    /* Main content sections */
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: var(--text-primary);
+      position: relative;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid var(--primary);
+      width: fit-content;
+    }
+
+    /* About section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .about-highlights {
+      background: var(--primary-light);
+      padding: 2rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .about-highlights h3 {
+      color: var(--primary);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .about-highlights ul {
+      list-style: none;
+      margin: 0;
+    }
+
+    .about-highlights li {
+      margin-bottom: 0.75rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .about-highlights li:before {
+      content: "→";
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      background: var(--bg-white);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--primary);
+      transition: all 0.2s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-top-color: var(--accent);
+    }
+
+    .skill-card strong {
+      display: block;
+      color: var(--primary);
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .skill-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Projects section */
+    .featured-project {
+      background: linear-gradient(135deg, var(--primary-light), var(--bg-white));
+      padding: 2rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--primary);
+      margin-bottom: 3rem;
+    }
+
+    .featured-project h3 {
+      color: var(--primary);
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .featured-project p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .featured-project strong {
+      color: var(--text-primary);
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: var(--bg-white);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .project-card strong {
+      color: var(--text-primary);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .project-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .project-link:hover {
+      color: var(--primary);
+      gap: 0.5rem;
+    }
+
+    /* Connect section */
+    .connect-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .connect-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .connect-table td {
+      padding: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .connect-table td:first-child {
+      font-weight: 600;
+      color: var(--text-primary);
+      width: 30%;
+    }
+
+    .connect-table a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .connect-table a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    /* Social links */
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 12px;
-      margin-top: 12px;
-      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
     }
 
     .social-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      background: var(--light-bg);
-      color: var(--text-primary);
+      background: var(--primary);
+      color: white;
       text-decoration: none;
-      font-size: 1.3rem;
-      transition: all 0.3s ease;
-      font-weight: bold;
+      font-weight: 700;
+      transition: all 0.2s;
     }
 
     .social-link:hover {
-      background: var(--primary-color);
-      color: white;
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(10, 102, 194, 0.3);
-    }
-
-    /* Content Container */
-    .content {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-
-    /* Section */
-    .section {
-      padding: 30px;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .section:last-child {
-      border-bottom: none;
-    }
-
-    .section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 15px;
-      color: var(--text-primary);
-      padding-bottom: 10px;
-      border-bottom: 3px solid var(--primary-color);
-      display: inline-block;
-      animation: fadeIn 0.6s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .section h3 {
-      font-size: 1.2rem;
-      margin: 15px 0 10px 0;
-      color: var(--primary-color);
-      font-weight: 600;
-    }
-
-    p {
-      margin-bottom: 12px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    /* Lists */
-    ul {
-      margin: 10px 0 10px 25px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    ul li::marker {
-      color: var(--primary-color);
-      font-weight: bold;
-    }
-
-    /* About Section */
-    .about-intro {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: var(--text-secondary);
-      margin-bottom: 15px;
-    }
-
-    .focus-label {
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 8px;
-    }
-
-    /* Skills Section */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    .skill-card {
-      background: linear-gradient(135deg, var(--light-bg), #f9f9f9);
-      padding: 15px;
-      border-radius: 10px;
-      border-left: 4px solid var(--primary-color);
-      transition: all 0.3s ease;
-    }
-
-    .skill-card:hover {
-      transform: translateX(5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .skill-card strong {
-      display: block;
-      color: var(--primary-color);
-      margin-bottom: 6px;
-      font-size: 0.9rem;
-    }
-
-    .skill-card p {
-      margin: 0;
-      font-size: 0.9rem;
-    }
-
-    /* Featured Project */
-    .project-highlight {
-      background: linear-gradient(135deg, #667eea15, #764ba215);
-      padding: 20px;
-      border-radius: 10px;
-      border-left: 5px solid var(--primary-color);
-      margin: 15px 0;
-    }
-
-    .project-highlight h3 {
-      color: var(--primary-color);
-      margin-top: 0;
-    }
-
-    .project-link {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      border-bottom: 2px solid transparent;
-    }
-
-    .project-link:hover {
-      color: var(--primary-dark);
-      border-bottom-color: var(--primary-color);
-    }
-
-    /* Projects List */
-    .projects-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    .project-card {
-      background: linear-gradient(135deg, var(--light-bg), white);
-      padding: 20px;
-      border-radius: 10px;
-      border-top: 4px solid var(--accent-color);
-      transition: all 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(0, 168, 232, 0.15);
-    }
-
-    .project-card strong {
-      display: block;
-      color: var(--text-primary);
-      margin-bottom: 8px;
-      font-size: 1rem;
-    }
-
-    .project-card p {
-      margin: 0 0 12px 0;
-      font-size: 0.9rem;
-    }
-
-    .project-card a {
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      font-size: 0.9rem;
-    }
-
-    .project-card a:hover {
-      color: var(--primary-color);
-      text-decoration: underline;
-    }
-
-    /* Table */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-      font-size: 0.95rem;
-    }
-
-    table thead {
-      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-      color: white;
-    }
-
-    table th,
-    table td {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    table tbody tr:hover {
-      background: var(--light-bg);
-    }
-
-    table a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    table a:hover {
-      color: var(--primary-dark);
-      text-decoration: underline;
+      background: var(--primary-dark);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
     }
 
     /* Footer */
     footer {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 12px;
-      padding: 20px;
+      background: var(--bg-white);
+      border-top: 1px solid var(--border);
+      padding: 2rem;
       text-align: center;
-      margin-top: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin-top: 4rem;
     }
 
     footer p {
-      margin-bottom: 10px;
-      font-weight: 500;
-      color: var(--text-primary);
+      color: var(--text-secondary);
       font-size: 0.9rem;
     }
 
-    /* Back to top button */
-    .back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--primary-color);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      font-size: 1.3rem;
-      cursor: pointer;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
-      z-index: 999;
-    }
-
-    .back-to-top.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .back-to-top:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(10, 102, 194, 0.4);
-    }
-
-    /* Responsive Design */
+    /* Responsive */
     @media (max-width: 768px) {
-      nav {
-        padding: 10px 12px;
-      }
-
-      .nav-brand {
-        font-size: 0.9rem;
-      }
-
-      .nav-links {
-        gap: 4px;
-      }
-
-      .nav-links a {
-        padding: 5px 8px;
-        font-size: 0.75rem;
-      }
-
-      .container {
-        padding: 10px;
-        margin-top: 55px;
-      }
-
-      header {
-        padding: 25px 20px;
-        margin-bottom: 12px;
-      }
-
       header h1 {
         font-size: 1.8rem;
-        margin-bottom: 6px;
       }
 
       .tagline {
-        font-size: 0.9rem;
-        margin-bottom: 12px;
+        font-size: 1rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .nav-links a {
+        font-size: 0.8rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-list {
+        grid-template-columns: 1fr;
       }
 
       .badges {
-        gap: 6px;
-        margin-bottom: 12px;
+        gap: 0.5rem;
       }
 
       .badge {
-        padding: 5px 10px;
         font-size: 0.75rem;
-      }
-
-      .social-links {
-        gap: 10px;
-        margin-top: 10px;
-      }
-
-      .social-link {
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
-      }
-
-      .section {
-        padding: 20px;
+        padding: 0.4rem 0.8rem;
       }
 
       .section h2 {
-        font-size: 1.3rem;
-        margin-bottom: 12px;
-      }
-
-      .section h3 {
-        font-size: 1rem;
-        margin: 12px 0 8px 0;
-      }
-
-      .skills-grid,
-      .projects-list {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      .project-highlight {
-        padding: 15px;
-        margin: 12px 0;
-      }
-
-      ul {
-        margin: 8px 0 8px 20px;
-      }
-
-      ul li {
-        margin-bottom: 6px;
-      }
-
-      table {
-        font-size: 0.85rem;
-      }
-
-      table th,
-      table td {
-        padding: 8px;
-      }
-
-      footer {
-        padding: 15px;
-        margin-top: 12px;
-      }
-
-      footer p {
-        margin-bottom: 8px;
-        font-size: 0.85rem;
-      }
-
-      .back-to-top {
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
       }
     }
 
     @media (max-width: 480px) {
-      body {
-        padding: 0;
-      }
-
-      nav {
-        padding: 8px 10px;
-      }
-
-      .nav-brand {
-        font-size: 0.85rem;
-      }
-
       .nav-links {
-        gap: 2px;
+        gap: 0.5rem;
       }
 
       .nav-links a {
-        padding: 4px 6px;
         font-size: 0.7rem;
-      }
-
-      .container {
-        padding: 8px;
-        margin-top: 50px;
+        padding: 0.25rem;
       }
 
       header {
-        padding: 20px 15px;
-        margin-bottom: 10px;
+        padding: 2rem 0;
       }
 
       header h1 {
         font-size: 1.5rem;
-        margin-bottom: 5px;
       }
 
       .tagline {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .cta-buttons {
+        gap: 0.5rem;
+      }
+
+      .btn {
+        padding: 0.6rem 1rem;
         font-size: 0.85rem;
-        margin-bottom: 10px;
       }
 
       .badges {
-        gap: 5px;
-        margin-bottom: 10px;
+        gap: 0.4rem;
       }
 
       .badge {
-        padding: 4px 8px;
         font-size: 0.7rem;
-      }
-
-      .social-links {
-        gap: 8px;
-        margin-top: 8px;
-      }
-
-      .social-link {
-        width: 38px;
-        height: 38px;
-        font-size: 1rem;
+        padding: 0.3rem 0.6rem;
       }
 
       .section {
-        padding: 18px;
+        margin-bottom: 2rem;
       }
 
-      .section h2 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-      }
-
-      .section h3 {
-        font-size: 0.95rem;
-        margin: 10px 0 6px 0;
-      }
-
-      p {
-        margin-bottom: 10px;
+      .social-link {
+        width: 45px;
+        height: 45px;
         font-size: 0.9rem;
       }
 
-      ul {
-        margin: 6px 0 6px 18px;
-      }
-
-      ul li {
-        margin-bottom: 5px;
-        font-size: 0.9rem;
-      }
-
-      .skills-grid,
-      .projects-list {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
+      .featured-project,
+      .project-card,
       .skill-card {
-        padding: 12px;
+        padding: 1rem;
       }
 
-      .project-card {
-        padding: 15px;
-      }
-
-      .project-highlight {
-        padding: 12px;
-        margin: 10px 0;
-      }
-
-      table {
-        font-size: 0.8rem;
-      }
-
-      table th,
-      table td {
-        padding: 6px 4px;
-      }
-
-      footer {
-        padding: 12px;
-        margin-top: 10px;
-      }
-
-      footer p {
-        margin-bottom: 6px;
-        font-size: 0.8rem;
-      }
-
-      .back-to-top {
-        bottom: 15px;
-        right: 15px;
-        width: 36px;
-        height: 36px;
-        font-size: 1rem;
+      .featured-project h3 {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -714,189 +534,163 @@
 <body>
   <!-- Navigation -->
   <nav>
-    <a href="#" class="nav-brand">MSK</a>
-    <ul class="nav-links">
-      <li><a href="#about" class="nav-link active">About</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#connect" class="nav-link">Connect</a></li>
-    </ul>
+    <div class="nav-container">
+      <a href="#" class="nav-brand">MSK</a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link active">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#connect" class="nav-link">Connect</a></li>
+      </ul>
+    </div>
   </nav>
 
   <div class="container">
-    <!-- Header -->
+    <!-- Hero Section -->
     <header>
       <h1>Mani Shankar Kumar</h1>
-      <p class="tagline">Staff Backend Engineer | Distributed Systems | GenAI</p>
-
+      <p class="tagline">Staff Backend Engineer • Distributed Systems • GenAI</p>
+      
       <div class="badges">
-        <span class="badge">📈 12+ Years Experience</span>
-        <span class="badge">🏦 BFSI & SaaS</span>
-        <span class="badge">📍 Gurgaon, India</span>
-        <span class="badge">🟢 Open to Work</span>
+        <span class="badge">12+ Years</span>
+        <span class="badge">BFSI & SaaS</span>
+        <span class="badge">Gurgaon, India</span>
+        <span class="badge">Open to Work</span>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="mailto:manishankarkumar131@gmail.com" class="btn btn-primary">Get in Touch</a>
+        <a href="https://github.com/msk131" class="btn btn-secondary">View on GitHub</a>
       </div>
 
       <div class="social-links">
         <a href="https://linkedin.com/in/mrmanishankar" class="social-link" title="LinkedIn">in</a>
         <a href="https://github.com/msk131" class="social-link" title="GitHub">gh</a>
-        <a href="mailto:manishankarkumar131@gmail.com" class="social-link" title="Email">✉️</a>
+        <a href="mailto:manishankarkumar131@gmail.com" class="social-link" title="Email">@</a>
       </div>
     </header>
 
-    <!-- Content -->
-    <div class="content">
-      <!-- About Section -->
-      <section class="section" id="about">
-        <h2>About</h2>
-        <p class="about-intro">
-          Backend engineer with 12+ years of experience building scalable distributed
-          systems across BFSI and SaaS platforms. I focus on backend architecture,
-          event-driven systems, cloud-native services, and production GenAI applications.
-        </p>
-
-        <p class="focus-label">Current focus:</p>
-        <ul>
-          <li>GenAI backend platforms and LLM orchestration</li>
-          <li>RAG pipelines, embeddings, and search</li>
-          <li>FastAPI, Java/Spring Boot, cloud-native services</li>
-          <li>High-throughput distributed systems</li>
-        </ul>
-      </section>
-
-      <!-- Skills Section -->
-      <section class="section" id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <strong>Languages & Frameworks</strong>
-            <p>Java, Python, Go, Spring Boot, FastAPI</p>
-          </div>
-          <div class="skill-card">
-            <strong>Cloud & Platform</strong>
-            <p>AWS, Azure, Docker, Kubernetes</p>
-          </div>
-          <div class="skill-card">
-            <strong>Data & Messaging</strong>
-            <p>Kafka, RabbitMQ, PostgreSQL, Redis, MongoDB, Cassandra</p>
-          </div>
-          <div class="skill-card">
-            <strong>GenAI</strong>
-            <p>RAG, vector search, embeddings, prompt pipelines, LLM orchestration</p>
-          </div>
+    <!-- About Section -->
+    <section class="section" id="about">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Backend engineer with 12+ years building scalable distributed systems for BFSI and SaaS platforms.</p>
+          <p>I architect event-driven systems, cloud-native services, and production GenAI applications. Currently focused on high-throughput systems and LLM orchestration platforms.</p>
         </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section class="section" id="projects">
-        <h2>Projects</h2>
-
-        <!-- Featured Project -->
-        <div class="project-highlight">
-          <h3>📧 Email Context Service</h3>
-          <p>
-            Backend API for CPA firms to capture client email conversations, generate
-            summaries, search prior context, and ask questions over firm-scoped email data.
-          </p>
-          <p>
-            <strong>Repository:</strong>
-            <a href="https://github.com/msk131/email-context-service" class="project-link">
-              github.com/msk131/email-context-service
-            </a>
-          </p>
-          <p><strong>Highlights:</strong></p>
+        <div class="about-highlights">
+          <h3>Current Focus</h3>
           <ul>
-            <li>FastAPI backend with async SQLAlchemy and Alembic migrations</li>
-            <li>Clean auth model with users, firm memberships, accountant profiles, firms, and clients</li>
-            <li>JWT authentication with role-based firm access</li>
-            <li>Mock Microsoft Graph-style email ingestion</li>
-            <li>LLM-backed summaries, search, and conversational Q&A</li>
-            <li>Background task records, caching, rate limits, and Prometheus metrics</li>
-            <li>Pytest coverage for auth, services, schemas, tasks, cache, and API behavior</li>
+            <li>GenAI backend platforms & LLM orchestration</li>
+            <li>RAG pipelines & vector search</li>
+            <li>FastAPI & Spring Boot microservices</li>
+            <li>High-throughput distributed systems</li>
           </ul>
         </div>
+      </div>
+    </section>
 
-        <!-- Other Projects -->
-        <h3 style="margin-top: 15px;">Other Projects</h3>
-        <div class="projects-list">
-          <div class="project-card">
-            <strong>🔗 Distributed Mesh</strong>
-            <p>Eureka, Zuul, and Hystrix-based microservice mesh architecture.</p>
-            <a href="https://github.com/msk131/EurekaServer">View Project →</a>
-          </div>
-          <div class="project-card">
-            <strong>📡 Event Streaming</strong>
-            <p>Kafka and Spring Boot event pipeline examples and patterns.</p>
-            <a href="https://github.com/msk131/spring-boot-apache-kafka">View Project →</a>
-          </div>
-          <div class="project-card">
-            <strong>☁️ Cloud Infrastructure</strong>
-            <p>Dynamic reverse proxy configuration with Consul and Nginx.</p>
-            <a href="https://github.com/msk131/nginx-consul-template">View Project →</a>
-          </div>
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <strong>Languages</strong>
+          <p>Java, Python, Go, Typescript</p>
         </div>
-      </section>
+        <div class="skill-card">
+          <strong>Frameworks</strong>
+          <p>Spring Boot, FastAPI, Node.js</p>
+        </div>
+        <div class="skill-card">
+          <strong>Cloud & DevOps</strong>
+          <p>AWS, Azure, Docker, Kubernetes</p>
+        </div>
+        <div class="skill-card">
+          <strong>Messaging</strong>
+          <p>Kafka, RabbitMQ, Redis</p>
+        </div>
+        <div class="skill-card">
+          <strong>Databases</strong>
+          <p>PostgreSQL, MongoDB, Cassandra</p>
+        </div>
+        <div class="skill-card">
+          <strong>GenAI Stack</strong>
+          <p>RAG, Vector DB, LLM Orchestration</p>
+        </div>
+      </div>
+    </section>
 
-      <!-- Connect Section -->
-      <section class="section" id="connect">
-        <h2>Connect</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Platform</th>
-              <th>Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>📧 Email</td>
-              <td>
-                <a href="mailto:manishankarkumar131@gmail.com">
-                  manishankarkumar131@gmail.com
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>💼 LinkedIn</td>
-              <td>
-                <a href="https://linkedin.com/in/mrmanishankar">
-                  linkedin.com/in/mrmanishankar
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>🐙 GitHub</td>
-              <td>
-                <a href="https://github.com/msk131">
-                  github.com/msk131
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </div>
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <h2>Projects</h2>
 
-    <!-- Footer -->
-    <footer>
-      <p>🚀 Currently building backend and GenAI systems for real-world business workflows.</p>
-      <img src="https://komarev.com/ghpvc/?username=msk131&color=brightgreen&style=flat-square" alt="Profile Views" />
-    </footer>
+      <div class="featured-project">
+        <h3>📧 Email Context Service</h3>
+        <p>Backend API for CPA firms to capture, summarize, and search email conversations using GenAI.</p>
+        <p>
+          <strong>Stack:</strong> FastAPI, SQLAlchemy, JWT Auth, OpenAI, Postgres, Pytest
+        </p>
+        <p>
+          <strong>Repo:</strong> <a href="https://github.com/msk131/email-context-service" class="project-link" style="color: var(--primary);">github.com/msk131/email-context-service</a>
+        </p>
+      </div>
+
+      <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.2rem; color: var(--text-primary);">Other Projects</h3>
+      <div class="project-list">
+        <div class="project-card">
+          <strong>🔗 Distributed Mesh</strong>
+          <p>Microservice mesh using Eureka, Zuul, and Hystrix for fault-tolerant service discovery at scale.</p>
+          <a href="https://github.com/msk131/EurekaServer" class="project-link">View Project →</a>
+        </div>
+        <div class="project-card">
+          <strong>⚡ Event Streaming</strong>
+          <p>Real-time data pipelines using Kafka and Spring Boot handling millions of events per second.</p>
+          <a href="https://github.com/msk131/spring-boot-apache-kafka" class="project-link">View Project →</a>
+        </div>
+        <div class="project-card">
+          <strong>☁️ Cloud Infrastructure</strong>
+          <p>Dynamic reverse proxy configuration with Consul and Nginx on Kubernetes clusters.</p>
+          <a href="https://github.com/msk131/nginx-consul-template" class="project-link">View Project →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section class="section" id="connect">
+      <h2>Connect</h2>
+      <table class="connect-table">
+        <tr>
+          <td>📧 Email</td>
+          <td><a href="mailto:manishankarkumar131@gmail.com">manishankarkumar131@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td>💼 LinkedIn</td>
+          <td><a href="https://linkedin.com/in/mrmanishankar">linkedin.com/in/mrmanishankar</a></td>
+        </tr>
+        <tr>
+          <td>🐙 GitHub</td>
+          <td><a href="https://github.com/msk131">github.com/msk131</a></td>
+        </tr>
+      </table>
+    </section>
   </div>
 
-  <!-- Back to top button -->
-  <button class="back-to-top" id="backToTop" title="Back to top">↑</button>
+  <!-- Footer -->
+  <footer>
+    <p>🚀 Building backend systems and GenAI platforms for real-world business workflows</p>
+  </footer>
 
   <script>
-    // Navigation active link
+    // Smooth scroll and nav highlighting
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
 
-    window.addEventListener('scroll', () => {
+    function updateActiveNav() {
       let current = '';
       sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
           current = section.getAttribute('id');
         }
       });
@@ -907,25 +701,10 @@
           link.classList.add('active');
         }
       });
+    }
 
-      // Show/hide back to top button
-      const backToTopBtn = document.getElementById('backToTop');
-      if (window.pageYOffset > 300) {
-        backToTopBtn.classList.add('show');
-      } else {
-        backToTopBtn.classList.remove('show');
-      }
-    });
+    window.addEventListener('scroll', updateActiveNav);
 
-    // Back to top button click
-    document.getElementById('backToTop').addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    // Smooth scroll for navigation links
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -933,6 +712,8 @@
         const targetSection = document.querySelector(targetId);
         if (targetSection) {
           targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Update nav immediately
+          setTimeout(updateActiveNav, 300);
         }
       });
     });
