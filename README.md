@@ -56,6 +56,25 @@ Mirrors patterns from real-world LLM platform work done at Clearwater Analytics.
 
 ---
 
+### [Risk Exposure & Secured Asset Operations Platform](https://github.com/msk131/risk-exposure-secured-asset-operations-platform)
+
+A documentation-first modernization portfolio for a legacy finance / asset management
+platform. It covers a 2005-era legacy baseline, phased migration strategy, Oracle
+database optimization, schema migration governance, target microservice architecture,
+AWS cloud strategy, GitOps delivery, testing, observability, RBAC migration, and
+zero-downtime rollout planning.
+
+**Highlights**
+- Legacy asset management baseline with batch operations, PL/SQL-style processing, SOAP/MQ-style integrations, and manual reconciliation
+- Finance system migration strategy with phased cutover, data integrity, reconciliation, and business continuity controls
+- Database optimization strategy focused on Oracle execution plans, indexing, partitioning, batch windows, and production rollout controls
+- Schema migration toolkit covering expand-contract migration, RBAC migration, coexistence data sync, and governance
+- Target architecture using Java/Spring services, service-owned databases, Kafka/MSK-style events, AWS EKS, Helm, Argo CD, OpenTelemetry, Prometheus, Grafana, and Splunk/AppDynamics-style monitoring
+
+`Architecture` `Migration Strategy` `Oracle` `AWS` `EKS` `Argo CD` `Kafka` `OpenTelemetry` `DevSecOps`
+
+---
+
 ## Other projects
 
 | Project | What it demonstrates | Stack |
