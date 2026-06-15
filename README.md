@@ -36,6 +36,21 @@ expectations across four organisations.
 
 ---
 
+## Architecture portfolio map
+
+| Repository | Architectural signal |
+|---|---|
+| [Email Context Service](https://github.com/msk131/email-context-service) | Proof-of-build backend with tenant isolation, retrieval fallbacks, background work, metrics, and tests |
+| [Open Document Intelligence Platform](https://github.com/msk131/open-document-intelligence-platform) | AI platform architecture case study for parser routing, OCR, normalized output, quality scoring, lineage, and worker isolation |
+| [Core Banking Ledger Service](https://github.com/msk131/core-banking-ledger-service) | Ledger architecture case study covering double-entry money movement, idempotency, auditability, reconciliation, and reliable events |
+| [Risk Exposure & Secured Asset Operations Platform](https://github.com/msk131/risk-exposure-secured-asset-operations-platform) | Banking modernization case study across legacy baseline, schema migration, target architecture, and execution controls |
+| [Finance System Migration Strategy](https://github.com/msk131/finance-system-migration-strategy) | Phased migration, parallel run, reconciliation, rollback planning, and cutover governance |
+| [Enterprise Database Optimization Strategy](https://github.com/msk131/database-optimization-expert-strategy) | Evidence-based Oracle performance strategy, rollout controls, and tuning governance |
+| [Enterprise Knowledge RAG Platform](https://github.com/msk131/enterprise-knowledge-rag-platform) | Enterprise RAG architecture with ingestion governance, access control, retrieval quality, evaluation, and observability |
+| [Llama 8B Fine-Tuning Lab](https://github.com/msk131/llama8b-finetuning-lab) | Experimental fine-tuning lab for data readiness, cost planning, evaluation gates, and deployment readiness |
+
+---
+
 ## Featured project
 
 ### [Email Context Service](https://github.com/msk131/email-context-service)
