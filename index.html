@@ -355,6 +355,19 @@
       gap: 1.5rem;
     }
 
+    .project-category {
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin: 2rem 0 1rem;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .project-list .project-category {
+      grid-column: 1 / -1;
+      margin-bottom: -.25rem;
+    }
+
     .project-card {
       background: var(--bg-white);
       padding: 1.5rem;
@@ -460,15 +473,14 @@
     <div class="nav-container">
       <a href="#" class="nav-brand">
         <svg class="logo-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="16" cy="16" r="3" fill="#0a66c2" stroke="#00a8e8" stroke-width="1.5"/>
-          <circle cx="16" cy="6" r="2.5" fill="#00a8e8" stroke="#0a66c2" stroke-width="1"/>
-          <circle cx="6" cy="24" r="2.5" fill="#00a8e8" stroke="#0a66c2" stroke-width="1"/>
-          <circle cx="26" cy="24" r="2.5" fill="#00a8e8" stroke="#0a66c2" stroke-width="1"/>
-          <circle cx="26" cy="10" r="2.5" fill="#00a8e8" stroke="#0a66c2" stroke-width="1"/>
-          <line x1="16" y1="16" x2="16" y2="6" stroke="#0a66c2" stroke-width="1.5" opacity="0.7"/>
-          <line x1="16" y1="16" x2="6" y2="24" stroke="#0a66c2" stroke-width="1.5" opacity="0.7"/>
-          <line x1="16" y1="16" x2="26" y2="24" stroke="#0a66c2" stroke-width="1.5" opacity="0.7"/>
-          <line x1="16" y1="16" x2="26" y2="10" stroke="#0a66c2" stroke-width="1.5" opacity="0.7"/>
+          <rect x="3" y="3" width="26" height="26" rx="8" fill="#0a66c2"/>
+          <path d="M9 10.5c0-1.4 3.1-2.5 7-2.5s7 1.1 7 2.5v7c0 1.4-3.1 2.5-7 2.5s-7-1.1-7-2.5v-7Z" fill="#e7f1ff"/>
+          <path d="M9 10.5c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5M9 14c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5" fill="none" stroke="#00a8e8" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M16 20v3M10 23h12" fill="none" stroke="#e7f1ff" stroke-width="1.5" stroke-linecap="round"/>
+          <rect x="6.5" y="21.5" width="5" height="5" rx="1.5" fill="#00a8e8"/>
+          <rect x="20.5" y="21.5" width="5" height="5" rx="1.5" fill="#10b981"/>
+          <circle cx="9" cy="24" r=".75" fill="#ffffff"/>
+          <circle cx="23" cy="24" r=".75" fill="#ffffff"/>
         </svg>
         MSK
       </a>
@@ -602,13 +614,13 @@
           </div>
           <div class="job-company">Clearwater Analytics · Noida, India</div>
           <ul class="job-bullets">
-            <li>Architected the U2S data pipeline — event-driven ingestion (AWS SNS/SQS, Java) processing 100,000+ daily financial records with sub-second latency and 99.9% uptime SLA.</li>
+            <li>Architected the event-driven U2S data ingestion pipeline using AWS SNS/SQS and Java, processing 100,000+ daily financial records with sub-second ingestion latency and 99.9% uptime SLA.</li>
             <li>Built the CWIC LPx copilot on LangChain, Azure AI Search, and Azure Document Intelligence — now widely adopted by clients for financial document automation.</li>
             <li>Built Onboarding Agent using LangChain + Azure AI Search with LLM-based extraction and hallucination mitigation — cutting cycle time from 5 days to under 1 day (60% effort reduction).</li>
             <li>Designed ML-based Fund Matching System using bigram analysis and Sentence Transformers — ~40% reduction in manual reconciliation across $50B+ in fund assets.</li>
             <li>Built Cash Break system with AWS Lambda and Java multithreading handling 10,000+ concurrent requests at peak.</li>
             <li>Engineered hybrid transaction predictor integrating Kotlin/Quarkus backend with Python XGBoost model deployed via Amazon SageMaker on EKS pods.</li>
-            <li>Optimised LLM token costs by 35% and retrieval latency by 40% through embedding pipeline tuning, chunking strategy, and intelligent caching across RAG workflows.</li>
+            <li>Optimized LLM token costs by 35% and retrieval latency by 40% through embedding pipeline tuning, chunking strategy, and intelligent caching across RAG workflows.</li>
             <li>Led cross-functional delivery across product, compliance, and engineering — team of 12 engineers.</li>
           </ul>
           <div class="stack-tags">
@@ -625,7 +637,7 @@
           <ul class="job-bullets">
             <li>Led fullstack development of BWNMS — Spring Boot microservices across 10+ services serving 50,000+ daily active users with 99.95% uptime.</li>
             <li>Designed Kafka-based event streaming and async messaging layer across 10+ microservices.</li>
-            <li>Implemented API gateway and identity management using Kong and Keycloak — centralising auth via SSO and enforcing rate limiting.</li>
+            <li>Implemented API gateway and identity management using Kong and Keycloak — centralizing auth via SSO and enforcing rate limiting.</li>
             <li>Guided CI/CD enhancements — increased release efficiency 40%, cut deployment time from 4 hours to 45 minutes.</li>
             <li>Mentored 5 junior and mid-level engineers on distributed systems design and microservices best practices.</li>
           </ul>
@@ -642,8 +654,8 @@
           <div class="job-company">Societe Generale · Bangalore, India</div>
           <ul class="job-bullets">
             <li>Developed Java Spring REST APIs processing 1M+ monthly financial transactions across compliance-critical banking workflows.</li>
-            <li>Optimised trade data compliance batch pipeline — reduced execution from 5 hours to 20 minutes (93% improvement), eliminating a planned $10M big data infrastructure investment.</li>
-            <li>Led architectural transition from monolith to microservices across 6 services, achieving 99.98% availability.</li>
+            <li>Optimized trade data compliance batch pipeline — reduced execution from 5 hours to 20 minutes (93% improvement), avoiding a planned $10M big data infrastructure investment.</li>
+            <li>Orchestrated decomposition of a core financial monolith into 6 domain-aligned microservices, improving platform availability to 99.98%.</li>
             <li>Automated deployments via CI/CD pipelines — enabled weekly releases vs. monthly (40% efficiency gain).</li>
           </ul>
           <div class="stack-tags">
@@ -675,12 +687,16 @@
     <section class="section" id="projects">
       <h2>Projects</h2>
 
+      <h3 class="project-category">Open Source &amp; Build Projects</h3>
+
       <div class="featured-project">
         <h3>📧 email-context-service</h3>
         <p>GenAI backend service for email context capture, summarization, and semantic search. Built for CPA firms to manage email conversations with AI-powered retrieval.</p>
         <p><strong>Stack:</strong> FastAPI · SQLAlchemy · JWT Auth · OpenAI · PostgreSQL · Docker · Pytest</p>
         <p><strong>Repo:</strong> <a href="https://github.com/msk131/email-context-service" target="_blank" rel="noreferrer" style="color:var(--primary); font-weight:600;">github.com/msk131/email-context-service</a></p>
       </div>
+
+      <h3 class="project-category">Architectural Case Studies &amp; Technical Write-Ups</h3>
 
       <div class="featured-project">
         <h3>🏦 Risk Exposure &amp; Secured Asset Operations Platform</h3>
@@ -738,6 +754,7 @@
           </div>
           <a href="https://github.com/msk131/llama8b-finetuning-lab" target="_blank" rel="noreferrer" class="project-link">View Project →</a>
         </div>
+        <h3 class="project-category">Foundational Backend Repositories</h3>
         <div class="project-card">
           <strong>⚡ spring-boot-apache-kafka</strong>
           <p>Kafka-based event streaming project demonstrating producer/consumer patterns and event-driven architecture using Spring Boot.</p>
